@@ -1,12 +1,14 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    min-height:100%;
+}
+@font-face {
+    font-family: junction;
+    src: url(../fonts/Junction-regular.otf);
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -20,5 +22,239 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-variant:small-caps;
+    color:#ff9000;
+    font-family:junction;
+}
+ul li b a{
+    font-variant:small-caps;
+     font-family:junction;
+}
+ul li b a:hover{
+   color:#ff9000;
+   text-decoration:none;
+}
+.pointerdiv{
+    position:relative;
+    background-color:#252525;
+    width:100% !important;
+}
+.pointerdiv:after{
+
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 25px #252525;
+    border-left: solid 25px transparent;
+    border-right: solid 25px transparent;
+}
+.pointerWhite{
+    position:relative;
+    background-color:#fff;
+    width:100% !important;
+}
+.pointerWhite:after{
+
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 25px #fff;
+    border-left: solid 25px transparent;
+    border-right: solid 25px transparent;
+}
+.mobile{
+
+}
+@media screen and (max-width: 800px) {
+    .mobile {
+        margin:0;
+
+    }
+    .welcome_left,.welcome_right{
+        margin:0;
+        margin-bottom:100px;
+    }
+    .slider,.slides{
+    height:400px !important;
+}
+    .selector {
+        left: 50%;
+    }
+}
+@media screen and (min-width: 801px) {
+   .mobile {
+        margin:20% 10%;
+    }
+   .welcome_left{
+       margin-left:30%;
+       margin-right:5%;
+
+   }
+    .welcome_right {
+        margin-right:30%;
+        margin-left:5%;
+    }
+   .slider,.slides{
+    height:600px !important;
+}
+   .selector {
+        left: 35%;
+    }
+}
+.welcome_left{
+    background-color:#EBEBEB;
+    padding:10px;
+
+}
+.welcome_right{
+    height:400px;
+
+}
+.welcome_left ul li{
+    clear:both;
+    font-size:1.3rem;
+    margin:20px 10px;
+}
+.welcomecard{
+    padding:0;
+  background-color:#ebebeb;
+  color:#000;
+  margin:20px 0;
+}
+.welcomecaption{
+  width:80%;
+  padding:10px;
+  display:inline-block;
+
+}
+.welcomeimage{
+  min-height:100%;
+  background-color:#ff9000;
+    float:right;
+  width:20%;
+  display:inline-block;
+
+}
+.welcomecard:after, .welcomecard:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 40px;
+    height: 50%;
+}
+.welcomecard:before {
+    top: 0px;
+    background: linear-gradient(to top right, #ff9000 50%, transparent 51%);
+}
+.welcomecard:after {
+    bottom: 0px;
+    background: linear-gradient(to bottom right, #ff9000 50%, transparent 51%);
+}
+
+/*CIRCULAR MENU*/
+.selector {
+  position: absolute;
+  top: 180px;
+  width: 140px;
+  height: 140px;
+  margin-top: -70px;
+  margin-left: -70px;
+}
+
+.selector,
+.selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.selector button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #ff9000;
+  border-radius: 50%;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all .1s;
+}
+
+.selector button:hover { background: #ffa500; }
+
+.selector button:focus { outline: none; }
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.selector li input { display: none; }
+
+.selector li input + label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  line-height: 1px;
+  margin-left: 0;
+  background: #fff;
+  border:2px solid #ff9000;
+  color:#000;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.selector li input + label:hover { background: #f0f0f0; }
+
+.selector li input:checked + label {
+  background: #5cb85c;
+  color: white;
+}
+
+.selector li input:checked + label:hover { background: #449d44; }
+
+.selector.open li input + label {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  /*margin-left: -40px;*/
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
 }

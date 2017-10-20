@@ -208,8 +208,26 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Bestelsysteem.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\logoSmall.png" />
+    <Content Include="Content\Images\voorbeeldimg1.jpg" />
+    <Content Include="Content\Images\voorbeeldimg2.jpg" />
+    <Content Include="Content\Images\voorbeeldimg2Portable.jpg" />
+    <Content Include="Content\Images\voorbeeldimg3.jpg" />
+    <Content Include="Content\Images\voorbeeldimg3Portable.jpg" />
+    <Content Include="Content\Images\voorbeeldimg4.jpg" />
+    <Content Include="Content\Images\voorbeeldimg4Portable.jpg" />
+    <Content Include="Content\Images\voorbeeldimg5.jpg" />
+    <Content Include="Content\Images\voorbeeldimg5Portable.jpg" />
+    <Content Include="Content\Images\Welcome.png" />
+    <Content Include="Content\materialize.css" />
+    <Content Include="Content\VideoPlayer\mediaelement-and-player.min.js" />
+    <Content Include="Content\VideoPlayer\mediaelement-flash-audio.swf" />
+    <Content Include="Content\VideoPlayer\mediaelement-flash-video.swf" />
+    <Content Include="Content\VideoPlayer\mediaelement.js" />
+    <Content Include="Content\VideoPlayer\testvideo.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -221,6 +239,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="fonts\roboto\Roboto-Light.woff" />
+    <Content Include="fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="fonts\Junction-bold.otf" />
+    <Content Include="fonts\Junction-light.otf" />
+    <Content Include="fonts\Junction-regular.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -229,9 +260,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\materialize.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
