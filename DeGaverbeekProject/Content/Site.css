@@ -267,13 +267,18 @@ ul li b a:hover{
     background-color:#ebebeb;
     height:100%;
     width:auto;
-    padding:5px;
+    padding:0;
    background: url('../Content/Images/online bestellen.jpg') no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
     
+}
+.filter-black{
+    background:rgba(25,25,25,0.4);
+    height:100%;
+        padding:5px;
 }
 #shopright img{
     
@@ -290,4 +295,8 @@ ul li b a:hover{
     vertical-align:middle;
     height:100%;
 
+}
+.center-logo{
+    font-weight:bolder;
+    font-family:junction;
 }

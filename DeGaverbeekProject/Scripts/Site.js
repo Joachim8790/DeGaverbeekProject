@@ -46,16 +46,24 @@ function circularmenu()
 
 }
 function resizeShopRight(){
+    var shopleft = $("#shopleft");
     if ($(window).width() < 1000) {
-        var shopleft = $("#shopleft");
+       
         var height = shopleft.innerWidth();
         $("#shopright").attr("style", "height:" + height + "px;width:" + height + "px;");
     }
     else
     {
-        var shopleft = $("#shopleft");
+        
         var height = shopleft.innerHeight();
         $("#shopright").attr("style", "height:" + height + "px;width:" + height + "px;");
     }
+    var shopleftheight = shopleft.innerHeight();
+    var shopleftwidth = shopleft.innerWidth(); 
+    var centerlogo = $(".center-logo");
+    var height = centerlogo.innerHeight();
+    var width = centerlogo.innerWidth();
+    centerlogo.attr("style", "margin-top:" + ((shopleftheight / 2) - (height / 2)) + "px;");
+    
    
 }
