@@ -208,10 +208,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\aos.css" />
     <Content Include="Content\Bestelsysteem.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\logoSmall.png" />
+    <Content Include="Content\Images\online bestellen.jpg" />
     <Content Include="Content\Images\voorbeeldimg1.jpg" />
     <Content Include="Content\Images\voorbeeldimg2.jpg" />
     <Content Include="Content\Images\voorbeeldimg2Portable.jpg" />
@@ -234,6 +236,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\aos.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -252,6 +255,7 @@
     <Content Include="fonts\Junction-bold.otf" />
     <Content Include="fonts\Junction-light.otf" />
     <Content Include="fonts\Junction-regular.otf" />
+    <Content Include="fonts\Infinity.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

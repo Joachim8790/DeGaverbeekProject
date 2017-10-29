@@ -5,7 +5,10 @@
     font-family: junction;
     src: url(../fonts/Junction-regular.otf);
 }
-
+@font-face {
+    font-family: infinity;
+    src: url(../fonts/Infinity.ttf);
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
 
@@ -24,10 +27,17 @@ select,
 textarea {
 
 }
-h1,h2,h3,h4,h5,h6{
+h1,h3,h4,h5,h6{
     font-variant:small-caps;
     color:#ff9000;
     font-family:junction;
+}
+h2{
+    font-family:junction;
+    color:#ff9000;
+    text-align:center;
+    font-variant:small-caps;
+    
 }
 ul li b a{
     font-variant:small-caps;
@@ -78,7 +88,7 @@ ul li b a:hover{
 .mobile{
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .mobile {
         margin:0;
 
@@ -93,8 +103,17 @@ ul li b a:hover{
     .selector {
         left: 50%;
     }
+    #shopleft{
+    margin:5%;
+
 }
-@media screen and (min-width: 801px) {
+    #shopright{
+
+    margin:5%;
+
+}
+}
+@media screen and (min-width: 1001px) {
    .mobile {
         margin:20% 10%;
     }
@@ -104,7 +123,7 @@ ul li b a:hover{
 
    }
     .welcome_right {
-        margin-right:30%;
+
         margin-left:5%;
     }
    .slider,.slides{
@@ -113,6 +132,19 @@ ul li b a:hover{
    .selector {
         left: 35%;
     }
+   .welcome{
+   margin-bottom:120px;
+}
+   #shopleft{
+   
+    margin:5% 0px 5% 25%;
+
+}
+   #shopright{
+
+    margin:10% 25% 10% 0px;
+
+}
 }
 .welcome_left{
     background-color:#EBEBEB;
@@ -128,41 +160,7 @@ ul li b a:hover{
     font-size:1.3rem;
     margin:20px 10px;
 }
-.welcomecard{
-    padding:0;
-  background-color:#ebebeb;
-  color:#000;
-  margin:20px 0;
-}
-.welcomecaption{
-  width:80%;
-  padding:10px;
-  display:inline-block;
 
-}
-.welcomeimage{
-  min-height:100%;
-  background-color:#ff9000;
-    float:right;
-  width:20%;
-  display:inline-block;
-
-}
-.welcomecard:after, .welcomecard:before {
-    content: "";
-    position: absolute;
-    left: 100%;
-    width: 40px;
-    height: 50%;
-}
-.welcomecard:before {
-    top: 0px;
-    background: linear-gradient(to top right, #ff9000 50%, transparent 51%);
-}
-.welcomecard:after {
-    bottom: 0px;
-    background: linear-gradient(to bottom right, #ff9000 50%, transparent 51%);
-}
 
 /*CIRCULAR MENU*/
 .selector {
@@ -257,4 +255,39 @@ ul li b a:hover{
   /*margin-left: -40px;*/
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
+}
+/*BESTELSYSTEEM PANEEL*/
+
+#shopleft{
+    background-color:#ebebeb;
+    padding:50px;
+
+}
+#shopright{
+    background-color:#ebebeb;
+    height:100%;
+    width:auto;
+    padding:5px;
+   background: url('../Content/Images/online bestellen.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
+}
+#shopright img{
+    
+    width:100%;
+    height:auto;
+    margin:0;
+
+    
+}
+.shoprightbutton{
+
+    border:2px solid #ffffff;
+    text-align:center;
+    vertical-align:middle;
+    height:100%;
+
 }
