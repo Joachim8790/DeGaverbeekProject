@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DeGaverbeekProject.ViewModels.IndexViewModel
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -128,7 +129,9 @@
 <br />
 <br />
 <div class="pointerWhite"></div>
-<div class="row" style="z-index:9;background-color:#505050;">
+<div class="row" style="z-index:9;background-color:#505050;margin-bottom:0;">
+    <br />
+    <br />
     <h2>Online bestellen</h2>
 <div class="col-lg-7 col-md-7" style="padding:0;">
     <div id="shopleft" data-aos="fade-up" data-aos-duration="1000">
@@ -153,7 +156,95 @@
     </div>
 </div>
 </div>
+<div class="pointerGreyDark" style="background-color:#505050;"></div>
+<div class="row" style="z-index:8;background-color:#ffffff;margin-bottom:0;">
+    <br />
+    <br />
+    <h2>Folder</h2>
+    <style>
+        .embed-container {
 
+            margin-bottom:10%;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+            .embed-container iframe, .embed-container object, .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    </style><div class='embed-container' data-page-width='452' data-page-height='640' id='ypembedcontainer'><iframe src="https://www.yumpu.com/nl/embed/view/PS0JNZHD2q8vVrG9" frameborder="0" allowfullscreen="true" allowtransparency="true"></iframe></div>
+    <script src='https://players.yumpu.com/modules/embed/yp_r_iframe.js'></script>
+</div>
+<div class="pointerWhite"></div>
+<div class="row" style="z-index:7;background-color:#EBEBEB;margin-bottom:0;">
+    <br />
+    <br />
+    <h2>Contact</h2>
+    <div class="contactform">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="input-field col s12 form">
+                <i class="material-icons prefix" style="color:#505050;">account_circle</i>
+
+
+                @Html.LabelFor(m => m.name, new { @for = "txtname", @style = "color:#ff9000;" })
+                @Html.TextBoxFor(m => m.name, new { @class = "validate data-required", id = "txtname" })
+
+
+
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="input-field col s12 form">
+                <i class="material-icons prefix" style="color:#505050;">email</i>
+
+
+                @Html.LabelFor(m => m.emailaddress, new { @for = "txtemailaddress", @class = "data-errorEMAIL", @style = "color:#ff9000;" })
+                @Html.TextBoxFor(m => m.emailaddress, new { @class = "validate data-required", @type = "email", id = "txtemailaddress" })
+
+
+
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="input-field col s12 form">
+                <i class="material-icons prefix" style="color:#505050;">create</i>
+
+
+                @Html.LabelFor(m => m.subject, new { @for = "txtsubject", @style = "color:#ff9000;" })
+                @Html.TextBoxFor(m => m.subject, new { @class = "validate data-required", id = "txtsubject" })
+
+
+
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="input-field col s12 form">
+                <i class="material-icons prefix" style="color:#505050;">message</i>
+
+
+                @Html.LabelFor(m => m.message, new { @for = "txtmessage", @style = "color:#ff9000;" })
+                @Html.TextAreaFor(m => m.message, new { @class = "materialize-textarea data-required", id = "txtmessage" })
+
+
+
+            </div>
+        </div>
+        <div class="row" style="text-align:center;" data-aos="fade-up" data-aos-duration="1000">
+            <button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">send</i>Verzenden</button>
+        </div>
+    </div>
+    <br />
+    <br />
+    </div>
+<div class="pointerGrey"></div>
 
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
