@@ -88,64 +88,402 @@ ul li b a:hover{
 .mobile{
 
 }
-@media screen and (max-width: 1000px) {
-    .mobile {
-        margin:0;
+@media screen and (min-width: 300px) {
+               .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 
     }
-    .welcome_left,.welcome_right{
-        margin:0;
-        margin-bottom:100px;
-    }
-    .slider,.slides{
-    height:400px !important;
+       .welcome_left{
+               margin: 0 1%;
+       }
+       #shopleft{
+           margin:0 1%;
+       }
+       #shopright{
+           width: 200px;
+    height: 200px;
+    margin: 5% auto 10% auto;
+       }
 }
-    .selector {
-        left: 50%;
+@media screen and (min-width: 400px) {
+               .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    }
+       .welcome_left{
+               margin: 0 5%;
+       }
+       #shopleft{
+           margin:0 5%;
+       }
+       #shopright{
+           width: 300px;
+    height: 300px;
+    margin: 5% auto 10% auto;
+       }
+}
+@media screen and (min-width: 500px) {
+           .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    }
+       .welcome_left{
+               margin: 0 10%;
+       }
+       #shopleft{
+           margin:0 10%;
+       }
+       #shopright{
+           width: 300px;
+    height: 300px;
+    margin: 5% auto 10% auto;
+       }
+}
+@media screen and (min-width: 600px) {
+          .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    }
+       .welcome_left{
+               margin: 0 10%;
+       }
+       #shopleft{
+           margin:0 10%;
+       }
+       #shopright{
+           width: 300px;
+    height: 300px;
+    margin: 5% auto 10% auto;
+       }
+}
+@media screen and (min-width: 700px) {
+             .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    }
+       .welcome_left{
+               margin: 0 15%;
+       }
+       #shopleft{
+           margin:0 15%;
+       }
+       #shopright{
+           width: 350px;
+    height: 350px;
+    margin: 5% auto 10% auto;
+       }
+}
+@media screen and (min-width: 800px) {
+              .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    }
+       .welcome_left{
+               margin: 0 15%;
+       }
+       #shopleft{
+           margin:0 15%;
+       }
+       #shopright{
+           width: 350px;
+    height: 350px;
+    margin: 5% auto 10% auto;
+       }
+}
+@media screen and (min-width: 900px) {
+       .welcome_right{
+         margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    }
+       .welcome_left{
+               margin: 0 15%;
+       }
+       #shopleft{
+           margin:0 15%;
+       }
+       #shopright{
+           width: 400px;
+    height: 400px;
+    margin: 5% auto 10% auto;
+       }
+}
+@media screen and (min-width: 1000px) {
+          .welcome_left{
+        margin-left: 20%;
+        margin-right: 15%;
+    }
+    .welcome_right{
+        margin-left: 35%;
+
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 16%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1100px) {
+         .welcome_left{
+        margin-left: 31%;
+        margin-right: 7%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 22%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1200px) {
+            .welcome_left{
+        margin-left: 36%;
+        margin-right: 7%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 27%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1300px) {
+        .welcome_left{
+        margin-left: 40%;
+        margin-right: 5%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 27%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .welcome_left{
+        margin-left: 40%;
+        margin-right: 5%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 35%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .welcome_left{
+        margin-left: 40%;
+        margin-right: 5%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 35%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .welcome_left{
+        margin-left: 40%;
+        margin-right: 5%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 40%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1700px) {
+         .welcome_left{
+        margin-left: 35%;
+        margin-right: 10%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 42%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1800px) {
+        .welcome_left{
+        margin-left: 35%;
+        margin-right: 10%;
+    }
+    .welcome_right{
+        margin-left: 30%;
+
+    }
+        .welcome{
+        margin-bottom:7%;
+    }
+     #shopleft{
+        margin-left: 42%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
+}
+@media screen and (min-width: 1900px) {
+        .welcome_left{
+        margin-left: 40%;
+    }
+    .welcome_right{
+        margin-left: 35%;
     }
     #shopleft{
-    margin:5%;
-
-}
+        margin-left: 46%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
     #shopright{
-
-    margin:5%;
-
-}
-}
-@media screen and (min-width: 1001px) {
-   .mobile {
-        margin:20% 10%;
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
     }
-   .welcome_left{
-       margin-left:30%;
-       margin-right:5%;
-
-   }
-    .welcome_right {
-
-        margin-left:5%;
+}
+@media screen and (min-width: 2000px) {
+    .welcome_left{
+        margin-left: 40%;
     }
-   .slider,.slides{
-    height:600px !important;
-}
-   .selector {
-        left: 35%;
+    .welcome_right{
+        margin-left: 35%;
     }
-   .welcome{
-   margin-bottom:120px;
+    #shopleft{
+        margin-left: 46%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+    #shopright{
+        margin-top: 14%;
+        margin-right: initial;
+        margin-bottom: initial;
+        margin-left: initial;
+    }
 }
-   #shopleft{
-   
-    margin:5% 0px 5% 25%;
 
-}
-   #shopright{
-
-    margin:10% 25% 10% 0px;
-
-}
-}
 .welcome_left{
     background-color:#EBEBEB;
     padding:10px;
@@ -265,8 +603,6 @@ ul li b a:hover{
 }
 #shopright{
     background-color:#ebebeb;
-    height:100%;
-    width:auto;
     padding:0;
    background: url('../Content/Images/online bestellen.jpg') no-repeat center center; 
   -webkit-background-size: cover;
@@ -299,4 +635,7 @@ ul li b a:hover{
 .center-logo{
     font-weight:bolder;
     font-family:junction;
+}
+.slider{
+    height:initial !important;
 }

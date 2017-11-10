@@ -4,7 +4,9 @@
     $(window).bind("load", resizeShopRight);
     $(window).bind("resize", resizeShopRight);
     $(window).bind("orientationchange", resizeShopRight);
-
+    $(window).bind("load", resizeWelcomeRight);
+    $(window).bind("resize", resizeWelcomeRight);
+    $(window).bind("orientationchange", resizeWelcomeRight);
 
 });
 
@@ -45,12 +47,20 @@ function circularmenu()
 
 
 }
+function resizeWelcomeRight(){
+
+    var welcomeleft = $(".welcome_left");
+    var welcomeright = $(".welcome_right");
+
+    var height = welcomeleft.innerHeight();
+    welcomeright.attr("style","height:"+height+"px;")
+
+}
 function resizeShopRight(){
     var shopleft = $("#shopleft");
+    var shopright = $("#shopright");
     if ($(window).width() < 1000) {
-       
-        var height = shopleft.innerWidth();
-        $("#shopright").attr("style", "height:" + height + "px;width:" + height + "px;");
+
     }
     else
     {
@@ -58,12 +68,12 @@ function resizeShopRight(){
         var height = shopleft.innerHeight();
         $("#shopright").attr("style", "height:" + height + "px;width:" + height + "px;");
     }
-    var shopleftheight = shopleft.innerHeight();
+    var shoprightheight = shopright.innerHeight();
     var shopleftwidth = shopleft.innerWidth(); 
     var centerlogo = $(".center-logo");
     var height = centerlogo.innerHeight();
     var width = centerlogo.innerWidth();
-    centerlogo.attr("style", "margin-top:" + ((shopleftheight / 2) - (height / 2)) + "px;");
+    centerlogo.attr("style", "margin-top:" + ((shoprightheight / 2) - (height / 2)) + "px;");
     
    
 }
