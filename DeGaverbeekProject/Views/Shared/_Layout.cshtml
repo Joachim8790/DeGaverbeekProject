@@ -21,27 +21,34 @@
 
                 <ul class="right hide-on-med-and-down">
                     <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
-                    <li><b><a href="@Url.Action("Products","Home")">producten</a></b></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Producten<i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
                     <li><b><a href="@Url.Action("Order","Home")">online bestellen</a></b></li>
 
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
-                    <li><b><a href="@Url.Action("Products","Home")">producten</a></b></li>
+                    <li><a style="font-variant:small-caps;font-family:junction;color:#fff;" class="dropdown-button" href="#!" data-activates="dropdown1">producten<i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
                     <li><b><a href="@Url.Action("Order","Home")">online bestellen</a></b></li>
                 </ul>
             </div>
-            
-
-            <ul class="side-nav" id="mobile-demo">
-                <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
-                <li><b><a href="@Url.Action("Products","Home")">producten</a></b></li>
-                <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
-                <li><b><a href="@Url.Action("Order","Home")">online bestellen</a></b></li>
-
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">Zuur</a></li>
+                <li><a href="#!">Zuivel</a></li>
+                <li><a href="#!">Wijn</a></li>
+                <li><a href="#!">Vis</a></li>
+                <li><a href="#!">Suiker</a></li>
+                <li><a href="#!">Kruiden</a></li>
+                <li><a href="#!">Deeg</a></li>
+                <li><a href="#!">Blikken</a></li>
+                <li><a href="#!">Olie</a></li>
+                <li><a href="#!">Bake-off</a></li>
+                <li><a href="#!">Beleg</a></li>
+                <li><a href="#!">Non-food</a></li>
             </ul>
+
+            
 
         </div>
     </nav>

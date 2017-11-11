@@ -8,6 +8,7 @@
     $(window).bind("resize", resizeWelcomeRight);
     $(window).bind("orientationchange", resizeWelcomeRight);
     $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown();
 });
 
 
