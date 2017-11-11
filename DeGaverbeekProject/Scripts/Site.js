@@ -7,7 +7,7 @@
     $(window).bind("load", resizeWelcomeRight);
     $(window).bind("resize", resizeWelcomeRight);
     $(window).bind("orientationchange", resizeWelcomeRight);
-
+    $(".button-collapse").sideNav();
 });
 
 

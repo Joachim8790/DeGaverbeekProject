@@ -141,9 +141,11 @@ ul li b a:hover{
            margin:0 1%;
        }
        #shopright{
-           width: 200px;
-    height: 200px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                                      .contactform{
         margin: 5% 5%;
@@ -167,9 +169,11 @@ ul li b a:hover{
            margin:0 5%;
        }
        #shopright{
-           width: 300px;
-    height: 300px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                                      .contactform{
         margin: 5% 5%;
@@ -190,9 +194,11 @@ ul li b a:hover{
            margin:0 10%;
        }
        #shopright{
-           width: 300px;
-    height: 300px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                                      .contactform{
         margin: 5% 10%;
@@ -213,9 +219,11 @@ ul li b a:hover{
            margin:0 10%;
        }
        #shopright{
-           width: 300px;
-    height: 300px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                                      .contactform{
         margin: 5% 10%;
@@ -236,9 +244,11 @@ ul li b a:hover{
            margin:0 15%;
        }
        #shopright{
-           width: 350px;
-    height: 350px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                               .contactform{
         margin: 5% 10%;
@@ -259,9 +269,11 @@ ul li b a:hover{
            margin:0 15%;
        }
        #shopright{
-           width: 350px;
-    height: 350px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                               .contactform{
         margin: 5% 10%;
@@ -282,9 +294,11 @@ ul li b a:hover{
            margin:0 15%;
        }
        #shopright{
-           width: 400px;
-    height: 400px;
-    margin: 5% auto 10% auto;
+
+           display:none;
+       }
+       .mobileAanmelden{
+           display:normal;
        }
                        .contactform{
         margin: 5% 15%;
@@ -320,6 +334,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+        display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
                 .contactform{
         margin: 5% 20%;
@@ -352,6 +370,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+            display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
                 .contactform{
         margin: 5% 20%;
@@ -384,6 +406,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+            display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
                 .contactform{
         margin: 5% 20%;
@@ -416,6 +442,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+           display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
                 .contactform{
         margin: 5% 20%;
@@ -448,6 +478,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+           display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
             .contactform{
         margin: 5% 20%;
@@ -480,6 +514,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+           display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
             .contactform{
         margin: 5% 20%;
@@ -512,6 +550,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+            display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
             .contactform{
         margin: 5% 20%;
@@ -544,6 +586,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+            display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
             .contactform{
         margin: 5% 20%;
@@ -576,6 +622,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+            display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
         .contactform{
         margin: 5% 20%;
@@ -605,6 +655,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+            display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
         .contactform{
         margin: 5% 15%;
@@ -634,6 +688,10 @@ ul li b a:hover{
         margin-right: initial;
         margin-bottom: initial;
         margin-left: initial;
+           display:block;
+    }
+    .mobileAanmelden{
+        display:none;
     }
     .contactform{
         margin: 5% 15%;
@@ -893,5 +951,9 @@ font-size:large;
 
 .product div{
     height:100%;
+    -webkit-display:inline-grid;
+    -o-display:inline-grid;
+    -moz-display:inline-grid;
+    -ms-display:inline-grid;
     display:inline-grid;
 }
