@@ -13,79 +13,102 @@
 
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><img class="brandlogo" src="~/Content/Images/logoSmall.png"/></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <div class="valign-wrapper" style="width:fit-content;height:100%;float:right;">
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <div class="valign-wrapper" style="height:100%; display:inline-block;">
 
+                    <a href="#" class="brand-logo"><img class="brandlogo" src="~/Content/Images/logoSmall.png" /></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i style="line-height: 105px;" class="material-icons">menu</i></a>
+
+                </div>
+
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="@Url.Action("Zuur","Home")">Zuur</a></li>
+                    <li><a href="@Url.Action("Zuivel","Home")">Zuivel</a></li>
+                    <li><a href="@Url.Action("Wijn","Home")">Wijn</a></li>
+                    <li><a href="@Url.Action("Vis","Home")">Vis</a></li>
+                    <li><a href="@Url.Action("Suiker","Home")">Suiker</a></li>
+                    <li><a href="@Url.Action("Kruiden","Home")">Kruiden</a></li>
+                    <li><a href="@Url.Action("Deegwaren","Home")">Deeg</a></li>
+                    <li><a href="@Url.Action("Conserven","Home")">Blikken</a></li>
+                    <li><a href="@Url.Action("Olie","Home")">Olie</a></li>
+                    <li><a href="@Url.Action("BakeOff","Home")">Bake-off</a></li>
+                    <li><a href="@Url.Action("Beleg","Home")">Beleg</a></li>
+                    <li><a href="@Url.Action("NonFood","Home")">Non-food</a></li>
+                </ul>
+                <ul id="dropdown2" class="dropdown-content">
+                    <li><a href="@Url.Action("Zuur","Home")">Zuur</a></li>
+                    <li><a href="@Url.Action("Zuivel","Home")">Zuivel</a></li>
+                    <li><a href="@Url.Action("Wijn","Home")">Wijn</a></li>
+                    <li><a href="@Url.Action("Vis","Home")">Vis</a></li>
+                    <li><a href="@Url.Action("Suiker","Home")">Suiker</a></li>
+                    <li><a href="@Url.Action("Kruiden","Home")">Kruiden</a></li>
+                    <li><a href="@Url.Action("Deegwaren","Home")">Deeg</a></li>
+                    <li><a href="@Url.Action("Conserven","Home")">Blikken</a></li>
+                    <li><a href="@Url.Action("Olie","Home")">Olie</a></li>
+                    <li><a href="@Url.Action("BakeOff","Home")">Bake-off</a></li>
+                    <li><a href="@Url.Action("Beleg","Home")">Beleg</a></li>
+                    <li><a href="@Url.Action("NonFood","Home")">Non-food</a></li>
+                </ul>
                 <ul class="right hide-on-med-and-down">
-                    <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Producten<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
-                    <li><b><a href="@Url.Action("Order","Home")">online bestellen</a></b></li>
-
+                    <div class="valign-wrapper" style="width:fit-content;height:100%;float:right; display:inline-block;line-height:100px;">
+                        <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
+                        <li><b><a class="dropdown-button" href="#!" data-activates="dropdown2">producten<i style="font-variant:initial; line-height:100px;" class="material-icons right">arrow_drop_down</i></a></b></li>
+                        <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
+                        <li><b><a href="@Url.Action("Order","Home")">online bestellen</a></b></li>
+                    </div>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
-                    <li><a style="font-variant:small-caps;font-family:junction;color:#fff;" class="dropdown-button" href="#!" data-activates="dropdown1">producten<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" style="color:#fff;" href="#!" data-activates="dropdown1">producten<i style="font-variant:initial;color:#fff;" class="material-icons right">arrow_drop_down</i></a></li>
                     <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
                     <li><b><a href="@Url.Action("Order","Home")">online bestellen</a></b></li>
                 </ul>
-            </div>
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">Zuur</a></li>
-                <li><a href="#!">Zuivel</a></li>
-                <li><a href="#!">Wijn</a></li>
-                <li><a href="#!">Vis</a></li>
-                <li><a href="#!">Suiker</a></li>
-                <li><a href="#!">Kruiden</a></li>
-                <li><a href="#!">Deeg</a></li>
-                <li><a href="#!">Blikken</a></li>
-                <li><a href="#!">Olie</a></li>
-                <li><a href="#!">Bake-off</a></li>
-                <li><a href="#!">Beleg</a></li>
-                <li><a href="#!">Non-food</a></li>
-            </ul>
 
-            
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+        <div style="width:100vw;height:5px;background-color:#ff9000;padding:0;margin:0;"></div>
+
+    <main>
+        @RenderBody()
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                    <br />
+                    <br />
+                    <a href="https://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a><br />
+                    ADD US ON FACEBOOK
+
+
+
+                </div>
+
+            </div>
 
         </div>
-    </nav>
-    <div style="width:100vw;height:5px;background-color:#ff9000;padding:0;margin:0;"></div>
-
-    <div class="container-fluid body-content">
-        @RenderBody()
-        <footer class="page-footer">
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12" style="text-align:center;">
-                        <br />
-                        <br />
-                        <a href="https://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a><br />
-                        ADD US ON FACEBOOK
-
-
-
-                    </div>
-
-                </div>
+                @DateTime.Today.Year - De Gaverbeek
 
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    @DateTime.Today.Year - De Gaverbeek
-                   
-                </div>
-            </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <script>
-    AOS.init();
+        AOS.init();
     </script>
 </body>
 </html>

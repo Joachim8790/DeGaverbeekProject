@@ -9,6 +9,16 @@
     $(window).bind("orientationchange", resizeWelcomeRight);
     $(".button-collapse").sideNav();
     $(".dropdown-button").dropdown();
+    $('.modal').modal();
+    
+    if ($("#modalopen")[0])
+    {
+        $('#modal1').modal('open');
+    }
+    if ($(".leverancier")[0])
+    {
+        Materialize.toast('Hier vind je enkel de leveranciers van de producten. Om de werkelijke producten te bekijken moet je naar het bestelsysteem', 6000) // 4000 is the duration of the toast
+    }
 });
 
 

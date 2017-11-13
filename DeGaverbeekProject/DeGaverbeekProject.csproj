@@ -214,9 +214,35 @@
     <Content Include="Content\aos.css" />
     <Content Include="Content\Bestelsysteem.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\alpro.png" />
+    <Content Include="Content\Images\apollo.png" />
+    <Content Include="Content\Images\aveno.png" />
+    <Content Include="Content\Images\barilla.png" />
+    <Content Include="Content\Images\dauphine.png" />
+    <Content Include="Content\Images\debic.png" />
+    <Content Include="Content\Images\dececco.png" />
+    <Content Include="Content\Images\diversifoods.png" />
+    <Content Include="Content\Images\elisa.png" />
+    <Content Include="Content\Images\gilco.png" />
+    <Content Include="Content\Images\hamal.png" />
+    <Content Include="Content\Images\honig.png" />
+    <Content Include="Content\Images\inex.png" />
+    <Content Include="Content\Images\isfi.png" />
+    <Content Include="Content\Images\knorr.png" />
+    <Content Include="Content\Images\lecoubourg.png" />
     <Content Include="Content\Images\logoSmall.png" />
+    <Content Include="Content\Images\olympia.png" />
     <Content Include="Content\Images\online bestellen.jpg" />
+    <Content Include="Content\Images\panesco.png" />
+    <Content Include="Content\Images\pastridor.png" />
+    <Content Include="Content\Images\pruve.png" />
+    <Content Include="Content\Images\salminvest.png" />
+    <Content Include="Content\Images\stop.png" />
+    <Content Include="Content\Images\vanafish.png" />
+    <Content Include="Content\Images\vandemoortele.png" />
+    <Content Include="Content\Images\vermeersch.png" />
+    <Content Include="Content\Images\verstegen.png" />
+    <Content Include="Content\Images\vh.png" />
     <Content Include="Content\Images\voorbeeldimg1.jpg" />
     <Content Include="Content\Images\voorbeeldimg2.jpg" />
     <Content Include="Content\Images\voorbeeldimg2Portable.jpg" />
@@ -273,14 +299,18 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -307,6 +337,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Zuur.cshtml" />
+    <Content Include="Views\Home\Zuivel.cshtml" />
+    <Content Include="Views\Home\Vis.cshtml" />
+    <Content Include="Views\Home\Wijn.cshtml" />
+    <Content Include="Views\Home\Suiker.cshtml" />
+    <Content Include="Views\Home\Olie.cshtml" />
+    <Content Include="Views\Home\Beleg.cshtml" />
+    <Content Include="Views\Home\Conserven.cshtml" />
+    <Content Include="Views\Home\BakeOff.cshtml" />
+    <Content Include="Views\Home\NonFood.cshtml" />
+    <Content Include="Views\Home\Deegwaren.cshtml" />
+    <Content Include="Views\Home\Kruiden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

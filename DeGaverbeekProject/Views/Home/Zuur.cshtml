@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Zuur";
+}
+<
+<br />
+<br />
+<h2>producten zuur</h2>
+<div class="row somepadding">
+
+    <div class="col-lg-12">
+        <div data-aos="fade-up" data-aos-duration="1000" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(1)" onmouseover="LeverancierHover(1)">
+
+            <img src="~/Content/Images/gilco.png" />
+            <div id="1" class="filter"><a href="http://gilco.eu/">Website bezoeken</a></div>
+
+        </div>
+       
+    </div>
+</div>
+<div class="pointerWhite"></div>
+<script>
+    function LeverancierHover(element)
+    {
+        $("#"+element+" a").attr("style", "display:inline;");
+    }
+    function LeverancierOut(element) {
+        $("#" + element + " a").attr("style", "display:none;");
+    }
+</script>
+

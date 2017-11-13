@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Deegwaren";
+}
+
+
+<br />
+<br />
+<h2>producten deegwaren</h2>
+<div class="row somepadding">
+
+    <div class="col-lg-12">
+        <div data-aos="fade-up" data-aos-duration="1000" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(1)" onmouseover="LeverancierHover(1)">
+
+            <img src="~/Content/Images/dececco.png" />
+            <div id="1" class="filter"><a href="http://www.dececco.it/nl_en/">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(2)" onmouseover="LeverancierHover(2)">
+
+            <img src="~/Content/Images/honig.png" />
+            <div id="2" class="filter"><a href="http://www.honig.nl/">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(3)" onmouseover="LeverancierHover(3)">
+
+            <img src="~/Content/Images/knorr.png" />
+            <div id="3" class="filter"><a href="http://www.knorr.be/">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(4)" onmouseover="LeverancierHover(4)">
+
+            <img src="~/Content/Images/barilla.png" />
+            <div id="4" class="filter"><a href="http://www.barilla.be/be_nl/index.jsp">Website bezoeken</a></div>
+
+        </div>
+
+    </div>
+</div>
+<div class="pointerWhite"></div>
+<script>
+    function LeverancierHover(element)
+    {
+        $("#"+element+" a").attr("style", "display:inline;");
+    }
+    function LeverancierOut(element) {
+        $("#" + element + " a").attr("style", "display:none;");
+    }
+</script>
+
+
+

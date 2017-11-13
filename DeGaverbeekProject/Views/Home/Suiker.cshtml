@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Suiker";
+}
+
+
+<br />
+<br />
+<h2>producten suiker</h2>
+<div class="row somepadding">
+    <div id="modalopen"></div>
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Geen vaste leveranciers</h4>
+            <p>Er zijn geen vaste leveranciers voor de categorie Suiker. De producten kunnen wel besteld worden via het bestelsysteem.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ok</a>
+        </div>
+    </div>
+</div>
+<div class="pointerWhite"></div>
+<script>
+
+    function LeverancierHover(element)
+    {
+        $("#"+element+" a").attr("style", "display:inline;");
+    }
+    function LeverancierOut(element) {
+        $("#" + element + " a").attr("style", "display:none;");
+    }
+
+</script>
+
+
+
+
+
+
+

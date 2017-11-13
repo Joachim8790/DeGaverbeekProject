@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Zuivel";
+}
+
+<br />
+<br />
+<h2>producten zuivel</h2>
+<div class="row somepadding">
+
+    <div class="col-lg-12">
+        <div data-aos="fade-up" data-aos-duration="1000" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(1)" onmouseover="LeverancierHover(1)">
+
+            <img src="~/Content/Images/inex.png" />
+            <div id ="1" class="filter"><a href="http://www.inex.be/">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(2)" onmouseover="LeverancierHover(2)">
+
+            <img src="~/Content/Images/debic.png" />
+            <div id ="2" class="filter"><a href="https://www.debic.com/be-nl">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(3)" onmouseover="LeverancierHover(3)">
+
+            <img src="~/Content/Images/vermeersch.png" />
+            <div id ="3" class="filter"><a href="https://www.lactispurnatur.be/nl/">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(4)" onmouseover="LeverancierHover(4)">
+
+            <img src="~/Content/Images/olympia.png" />
+            <div id ="4" class="filter"><a href="http://www.olympiadairy.be/">Website bezoeken</a></div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="col-sm-6 col-md-6 col-lg-4 leverancier" onmouseout="LeverancierOut(5)" onmouseover="LeverancierHover(5)">
+
+            <img src="~/Content/Images/alpro.png" />
+            <div id ="5" class="filter"><a href="https://www.alpro.com/">Website bezoeken</a></div>
+
+        </div>
+    </div>
+</div>
+<div class="pointerWhite"></div>
+<script>
+    function LeverancierHover(element)
+    {
+        $("#"+element+" a").attr("style", "display:inline;");
+    }
+    function LeverancierOut(element) {
+        $("#" + element + " a").attr("style", "display:none;");
+    }
+</script>
+
+
