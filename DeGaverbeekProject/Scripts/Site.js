@@ -7,10 +7,12 @@
     $(window).bind("load", resizeWelcomeRight);
     $(window).bind("resize", resizeWelcomeRight);
     $(window).bind("orientationchange", resizeWelcomeRight);
+    $(window).bind("load", resizecontactpage);
+    $(window).bind("resize", resizecontactpage);
+    $(window).bind("orientationchange", resizecontactpage);
     $(".button-collapse").sideNav();
     $(".dropdown-button").dropdown();
     $('.modal').modal();
-    
     if ($("#modalopen")[0])
     {
         $('#modal1').modal('open');
@@ -21,7 +23,10 @@
     }
 });
 
-
+function callme()
+{
+    $('.tap-target').tapTarget('open');
+}
 function circularmenu()
 {
     var nbOptions = 8;
@@ -66,6 +71,22 @@ function resizeWelcomeRight(){
     var height = welcomeleft.innerHeight();
     welcomeright.attr("style","height:"+height+"px;")
 
+}
+function resizecontactpage()
+{
+    if ($(".contactleft")[0])
+    {
+        if ($(window).width() > 999) {
+            var contactleft = $(".contactleft");
+            var contactright = $(".contactright");
+            var iframe = $("iframe");
+            wantedheight = $("main").height();
+            iframe.height(wantedheight);
+            contactleft.height(wantedheight);
+
+        }
+    }
+    
 }
 function resizeShopRight(){
     var shopleft = $("#shopleft");
