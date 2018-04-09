@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>De Gaverbeek Store</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="~/Content/aos.css" />
+    <script src="~/Scripts/aos.js"></script>
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/DeGaverbeekStore/css")
+    
+</head>
+<body>
+    <nav class="horizontal-nav">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img alt="logo de gaverbeek" src="~/Content/Images/logoSmall.png" /></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html"><i class="material-icons horizontal-nav-item">search</i></a></li>
+                <li><a href="badges.html"><i class="material-icons horizontal-nav-item">view_module</i></a></li>
+                <li><a href="collapsible.html"><i class="material-icons horizontal-nav-item">refresh</i></a></li>
+                <li><a href="mobile.html"><i class="material-icons horizontal-nav-item">more_vert</i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a class="Products" href="@Url.Action("Products","Shop")"><i class="material-icons">shopping_cart</i>De Gaverbeek Store</a></li>
+                <li><a class="ShoppingBasket" href="@Url.Action("ShoppingBasket","Shop")"><i class="material-icons">shopping_basket</i>Winkelmandje</a></li>
+                <li><a class ="MyProfile" href="#"><i class="material-icons">account_circle</i>Mijn profiel</a></li>
+                <li><a class="History" href="#"><i class="material-icons">history</i>Bestelhistoriek</a></li>
+                <li><a class="Settings" href="#"><i class="material-icons">settings</i>Instellingen</a></li>
+                <li><a class="LogOut" href="#"><i class="material-icons">exit_to_app</i>Afmelden</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="icon-bar">
+            <a class="navlogo" href="#"><img alt="logo de gaverbeek" src="~/Content/Images/logoSmall.png" /></a>
+            <a class="Products" href="@Url.Action("Products","Shop")"><i class="material-icons">shopping_cart</i><h2>De Gaverbeek Store</h2></a>
+            <a class="ShoppingBasket" href="@Url.Action("ShoppingBasket","Shop")"><i class="material-icons">shopping_basket</i><div id="Badge" class="secondary-color">4</div><h2>Winkelmandje</h2></a>
+            <a class ="MyProfile" href="#"><i class="material-icons">account_circle</i><h2>Mijn profiel</h2></a>
+            <a class="History" href="#"><i class="material-icons">history</i><h2>Bestelhistoriek</h2></a>
+            <a class="Settings" href="#"><i class="material-icons">settings</i><h2>Instellingen</h2></a>
+            <a class="LogOut" href="#"><i class="material-icons"> exit_to_app</i><h2>Afmelden</h2></a>
+        </div>
+
+   
+    <main>@RenderBody()</main>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Content/DeGaverbeekStore/js")
+    @RenderSection("scripts", required: false)
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

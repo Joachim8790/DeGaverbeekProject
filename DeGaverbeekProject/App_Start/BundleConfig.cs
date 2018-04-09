@@ -29,6 +29,15 @@ namespace DeGaverbeekProject
                       "~/Content/bootstrap.css",
                       "~/Content/materialize.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/DeGaverbeekStore/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/materialize.css",
+                      "~/Content/DeGaverbeekStore/css/Navigation.css",
+                      "~/Content/DeGaverbeekStore/css/site.css"));
+
+            bundles.Add(new ScriptBundle("~/Content/DeGaverbeekStore/js").Include(
+                     "~/Content/DeGaverbeekStore/js/site.js"));
         }
+        
     }
 }

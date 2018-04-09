@@ -1,0 +1,130 @@
+﻿a:hover{
+    text-decoration:none !important;
+}
+
+.icon-bar {
+    width: 90px; /* Set a specific width */
+    background-color: #303030; /* Dark-grey background */
+    display:block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100%;
+}
+
+.icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Add a hover color */
+}
+
+
+.navlogo:hover{
+    background-color: #303030 !important;
+}
+.navlogo{
+    
+    padding: 10% !important;
+}
+.navlogo img{   
+    width: 100%;
+}
+/*-----------------------HORIZONTAL NAVIGATION--------------------*/
+.horizontal-nav-item {
+    height:100% !important;
+}
+.horizontal-nav{
+    height: 65px !important;
+}
+.button-collapse i{
+    height: 100% !important;
+    line-height: 65px !important;
+}
+@media only screen and (max-width: 595px) {
+    .horizontal-nav{
+        display:normal;
+    }
+    .icon-bar {
+   display:none;
+}
+}
+@media only screen and (min-width: 596px) {
+    .horizontal-nav{
+        display:none;
+    }
+    .icon-bar {
+        display:inherit;
+        position: fixed;
+        z-index: 10000 !important;
+
+}
+}
+.brand-logo{
+    position: absolute !important;
+    left: initial !important;
+    transform: initial !important;
+    right: 1%;
+    height: 100%;
+    padding: 2px !important;
+}
+.brand-logo img{
+   height:54px;
+}
+#mobile-demo li a{
+    color:#fff !important;
+}
+.side-nav li a:hover{
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+#mobile-demo li .active:hover{
+    background-color:#ff9000 !important;
+}
+#mobile-demo li .active{
+    background-color:#ff9000 !important;
+}
+#mobile-demo li a i{
+    color:#fff !important;
+}
+.icon-bar a h2 {
+  z-index: -999;
+  position: absolute;
+  margin-top: -59px;
+  left: 0;
+  opacity: 0;
+  line-height: 75px;
+  -webkit-transition: left .3s;
+  -moz-transition: left .5s;
+  -ms-transition: left .5s;
+  -o-transition: left .5s;
+  transition: left .5s;
+  background:#303030 !important;
+  font-size:medium !important;
+  border:none !important;
+  width: 90px !important;
+  font-variant-caps:all-small-caps;
+  font-weight:300;
+
+}
+.icon-bar .active:hover{
+    background-color:#ff9000 !important;
+}
+.icon-bar .active{
+    background-color:#ff9000 !important;
+}
+.icon-bar .active h2{
+    background:#ff9000 !important;
+}
+
+.icon-bar a:hover h2 {
+  opacity: 1;
+  left: 90px;
+  width:200px !important;
+  text-align: center;
+}

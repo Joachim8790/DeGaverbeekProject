@@ -200,6 +200,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +215,9 @@
     <Content Include="Content\aos.css" />
     <Content Include="Content\Bestelsysteem.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\DeGaverbeekStore\css\Navigation.css" />
+    <Content Include="Content\DeGaverbeekStore\css\site.css" />
+    <Content Include="Content\DeGaverbeekStore\js\site.js" />
     <Content Include="Content\Images\alpro.png" />
     <Content Include="Content\Images\apollo.png" />
     <Content Include="Content\Images\aveno.png" />
@@ -350,6 +354,9 @@
     <Content Include="Views\Home\NonFood.cshtml" />
     <Content Include="Views\Home\Deegwaren.cshtml" />
     <Content Include="Views\Home\Kruiden.cshtml" />
+    <Content Include="Views\Shared\_LayoutWebshop.cshtml" />
+    <Content Include="Views\Shop\Products.cshtml" />
+    <Content Include="Views\Shop\ShoppingBasket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -384,7 +391,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>39893</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:39893/</IISUrl>
+          <IISUrl>http://localhost:31548</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

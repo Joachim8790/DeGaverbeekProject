@@ -1,0 +1,172 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutWebshop.cshtml";
+}
+
+
+<div class="row categoryTabsRow">
+<div class="categoryTabs col s12">
+    <ul class="tabs tabs-transparent tabs-fixed-width">
+        <li class="tab col s3"><a href="#test1" class="active">Zuur</a></li>
+        <li class="tab col s3"><a href="#test2">Zuivel</a></li>
+        <li class="tab col s3"><a href="#test3">Wijn</a></li>
+        <li class="tab col s3"><a href="#test4">Vis</a></li>
+        <li class="tab col s3"><a href="#test5">Suiker</a></li>
+        <li class="tab col s3"><a href="#test6">Kruiden</a></li>
+        <li class="tab col s3"><a href="#test7">Deeg</a></li>
+        <li class="tab col s3"><a href="#test8">Blikken</a></li>
+        <li class="tab col s3"><a href="#test9">Olie</a></li>
+        <li class="tab col s3"><a href="#test10">Bake-Off</a></li>
+        <li class="tab col s3"><a href="#test11">Beleg</a></li>
+        <li class="tab col s3"><a href="#test12">Non-Food</a></li>
+    </ul>
+</div>
+    <div id="megaDropDown" class="hidden">
+       
+            <div id="test1" class="col s12">Zuur</div>
+            <div id="test2" class="col s12">Zuivel</div>
+            <div id="test3" class="col s12">Wijn</div>
+            <div id="test4" class="col s12">Vis</div>
+            <div id="test5" class="col s12">Suiker</div>
+            <div id="test6" class="col s12">Kruiden</div>
+            <div id="test7" class="col s12">Deeg</div>
+            <div id="test8" class="col s12">Blikken</div>
+            <div id="test9" class="col s12">Olie</div>
+            <div id="test10" class="col s12">Bake-Off</div>
+            <div id="test11" class="col s12">Beleg</div>
+            <div id="test12" class="col s12">Non-Food</div>
+        
+    </div>
+</div>
+
+<div id="functionsTop" class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div style="color:#fff;">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+        <a id='ddlSorteren' class='dropdown-button btn-flat' href='#' data-beloworigin="true" data-activates='dropdown1'><i class="material-icons">sort</i>SORTEREN OP</a>       
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!"><i class="material-icons">sort_by_alpha</i> Alfabetisch oplopend</a></li>
+
+            <li><a href="#!"><i class="material-icons">sort_by_alpha</i>Alfabetisch aflopend</a></li>
+
+            <li><a href="#!"><i class="material-icons">attach_money</i>Prijs laag naar hoog</a></li>
+
+            <li><a href="#!"><i class="material-icons">attach_money</i>Prijs hoog naar laag</a></li>
+
+            <li><a href="#!"><i class="material-icons">date_range</i>Nieuwste eerst</a></li>
+
+            <li><a href="#!"><i class="material-icons">date_range</i>Oudste eerst</a></li>
+        </ul>     
+    </div>
+
+    </div>
+
+<ul id="slide-out" class="side-nav">
+    <li><div class="divider"></div></li>
+    <li><a  class="subheader" onclick="sideNav('hide')" href="#!"><i class="material-icons">format_align_justify</i>Subcategorie</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!">Subcategorie 1</a></li>
+    <li><a href="#!">Subcategorie 2</a></li>
+    <li><a href="#!">Subcategorie 3</a></li>
+    <li><a href="#!">Subcategorie 4</a></li>
+    <li><a href="#!">Subcategorie 5</a></li>
+    <li><a href="#!">Subcategorie 6</a></li>
+    <li><a href="#!">Subcategorie 7</a></li>
+    <li><div class="divider"></div></li>
+    
+</ul>
+
+<div id="products" class="row">   
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price" style="text-decoration:line-through;">€15,95  <div class="chip discount">€14,54</div>   <span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+    <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+    <div class="card-title">Product1 van categorie 2</div>
+    <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+    <input placeholder="Aantal" type="number" />
+    <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+</div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-card">
+        <img class="webshop-image" alt="webshop image" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.966.725.suffix/1371616351150.jpeg" />
+        <div class="card-title">Product1 van categorie 2</div>
+        <div class="price">€15,95<span class="new badge" data-badge-caption="Per kg"> </span></div>
+        <input placeholder="Aantal" type="number" />
+        <a class="btn secondary-color"><i class="material-icons">shopping_cart</i>Toevoegen</a>
+    </div>
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+</div>
