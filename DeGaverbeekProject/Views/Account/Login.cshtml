@@ -1,63 +1,55 @@
-﻿@using DeGaverbeekProject.Models
-@model LoginViewModel
+﻿@model DeGaverbeekProject.Models.LoginViewModel
+
 @{
-    ViewBag.Title = "Log in";
+    Layout = null;
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="~/Content/aos.css" />
+    <script src="~/Scripts/aos.js"></script>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/DeGaverbeekStore/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="transparent-bg"></div>
+    <div class="loginScreen">
+        <div class="row">
+            <div class="outer">
+                <div class="middle">
+                        <div class="col-sm-12 logincol">
+                            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                            {
+                            <img alt="login-placeholder" src="~/Content/Images/loginPlaceholder.png"/>
+                            <input type="text" name="Email" id="Email" placeholder="Emailadres" class="TextBoxDesign" />
+                            <input type="password" name="Password" id="Password" placeholder="Wachtwoord" class="TextBoxDesign" />
+                            <div class="row">
+                            <div class="col-sm-12 pwforgot no-padding"><a href="@Url.Action("ForgotPassword", "Account")">Wachtwoord vergeten?</a></div>
+                            </div>
+
+
+                            <button class="btn loginbtn" type="submit">AANMELDEN</button>
+                            <a class="newUser" href="@Url.Action("Register", "Account")">Nog geen gebruiker? Vraag nu je account aan</a>
+                           
+                            }
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
+            </div>
                 </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                <script>
+                    AOS.init();
+                </script>
+</body>
+</html>

@@ -4,7 +4,14 @@ overflow-y:scroll !important;
 
 
 }
-
+@media only screen and (max-width: 1119px) {
+    .ordertotal{
+        text-align:center !important;
+    }
+    .info-item textarea {
+        height: 105px;
+    }
+}
 @media only screen and (max-width: 595px) {
     main
     {
@@ -39,8 +46,10 @@ overflow-y:scroll !important;
     }
     table{
     margin:0px;
+    }
+
 }
-}
+
 @media only screen and (min-width: 596px) {
     main{
         margin-left:90px;
@@ -76,6 +85,20 @@ overflow-y:scroll !important;
     table{
     margin:20px;
     }
+
+}
+@media only screen and (min-width: 1110px) {
+     .ordertotal{
+        text-align:right !important;
+        clear:both;
+        
+    }
+         .info-item textarea {
+        height: inherit;
+    }
+         .total a,.totalPrice{
+             padding:5px 8px;
+         }
 }
 li .subheader, li .subheader i{
     color:#fff !important;
@@ -306,6 +329,54 @@ table p{
     
 
 }
+.headerSecondary-right{
+    background-color: #ff9000;
+    float:right;
+    clear:both;
+    transform:skewX(30deg);
+    text-align:right;
+    overflow:hidden;
+    display:inline-block;
+    padding:0px 40px;
+    margin-right: -40px;
+}
+.headerSecondary-right h1, .headerSecondary-right h2, .headerSecondary-right h3, .headerSecondary-right h4, .headerSecondary-right h5, .headerSecondary-right h6 {
+   
+    color:#fff;
+     transform:skewX(-30deg);
+     margin:0;
+     font-variant-caps:all-small-caps;
+     line-height:60px !important;
+     font-weight:200;
+     margin-right:25px;
+     clear:both;
+    
+
+}
+.headerSecondary-left{
+    background-color: #ff9000;
+    float:left;
+    clear:both;
+    transform:skewX(30deg);
+    text-align:left;
+    overflow:hidden;
+    display:inline-block;
+    padding:0px 40px;
+    margin-left: -40px;
+    clear:both;
+}
+.headerSecondary-left h1, .headerSecondary-left h2, .headerSecondary-left h3, .headerSecondary-left h4, .headerSecondary-left h5, .headerSecondary-left h6 {
+   
+    color:#fff;
+     transform:skewX(-30deg);
+     margin:0;
+     font-variant-caps:all-small-caps;
+     line-height:60px !important;
+     font-weight:200;
+     margin-left:25px;
+    
+
+}
 .overflowHidden{
     overflow: hidden !important;
     clear:both;
@@ -319,56 +390,51 @@ table p{
     
     max-width:1200px;
     margin:20px auto;
+    padding:10px;
     
 }
 .total,.template{
     background-color:#fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   
 }
 .template{
     overflow-x:hidden;
+    margin-bottom:10px;
 }
 .total{
     font-size:2rem;
     font-weight:200;
-    text-align:center;
     overflow-x:hidden;
 }
 .totalPrice {
-    font-size:3rem;
     font-weight:300;
-    text-align:center;
-    padding:10px;
-    clear:both;
+    text-align:right;
+    margin:10px 13px;
+
+}
+
+.orderButton,.totalPrice{
+     display:inline-block;
 
 }
 .primary-color{
     background-color:#ff9000;
     color:#fff;
 }
-.total a{
-    
+.total a{  
     font-variant: all-small-caps;
     font-size: smaller;
     font-weight: 300;
     padding: 15px;
     display: inline-block;
-    width: calc(100% - 8px);
-    margin: 4px;
+    margin: 10px 13px;
 }
 .template-image{
     width:100px;
 }
 .template-item{
-
     border:1px solid #efefef;
     padding-left:0px;
-}
-.template-item:hover{
-    background-color:#efefef;
-
 }
 .template-content{
     display:inline-block;
@@ -388,13 +454,10 @@ table p{
     padding:0;
 }
 .info-item{
-     background-color:#fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color:#fff;
     margin:0px
 }
 .info-component{
-    margin:4px 0;
     overflow: hidden; 
     width: 100%;
 }
@@ -405,11 +468,21 @@ table p{
 position: static;
     margin: 10px;
     width: -webkit-fill-available;
-    height: 116px;
     padding:10px;
     resize:none;
-    background:#efefef;
+    background:#ddd;
+    color:#000;
 
+}
+.info-item textarea::placeholder{
+    color:#888;
+
+}
+.info-item textarea:-ms-input-placeholder{
+        color:#888;
+}
+.info-item textarea::-ms-input-placeholder{
+        color:#888;
 }
 .modal-content{
     padding:0 !important;
@@ -422,4 +495,105 @@ position: static;
 .info-component [class*="col-"] {
     margin-bottom: -99999px;
     padding-bottom: 99999px !important;
+}
+#MyInfoContainer .info-item{
+
+
+}
+.loginScreen{
+    background:url(../../Images/1375.jpg) !important;
+    min-height: 100vh !important; 
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
+}
+.transparent-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    min-height:100%;
+    min-width:100%;
+    background:rgba(100,100,100,0.85);
+}
+.TextBoxDesign{
+
+    background-color:#fff !important;
+     width:calc(100% - 60px)  !important;
+     font-size:1.3rem !important;
+
+}
+.logincol {
+    padding: 10px 10px 10px 0;
+    background: rgba(255,255,255,0.6);
+    margin: 10px;
+    max-width:600px !important;
+    text-align: center;
+
+}
+.registercol{
+    padding: 10px 10px 10px 0;
+    background: rgba(255,255,255,0.6);
+    margin: 10px;
+    max-width:1100px !important;
+    text-align: center;
+    overflow:hidden;
+}
+.loginbtn,.registerbtn{
+    width:100% !important;
+    background-color:#ff9000;
+    color:#fff;
+    border-radius:0px;
+    height:auto !important;
+     width:calc(100% - 20px) !important;
+
+}
+.loginbtn,.TextBoxDesign,.registerbtn{
+         margin:5px 15px !important;
+         padding:20px !important;
+}
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: -webkit-center;
+}
+
+.loginScreen a,.registerScreen a{
+    color:#777 !important;
+}
+.loginScreen .btn,.registerScreen btn{
+    color:#fff !important;
+}
+.loginScreen a:hover,.registerScreen a:hover{
+    color:#ff9000 !important;
+    text-decoration:none;   
+}
+.loginScreen .pwforgot{
+    text-align:left;
+    padding-left:15px !important;
+
+    font-weight:bold;
+}
+.loginScreen .newUser{
+    text-align:center;
+    display:block;
+    font-weight:bold;
+}
+.loginScreen img{
+    width:calc(100% - 20px);
+    margin:15px;
+    max-width: 300px;
+}
+ .registerScreen{
+    background:url(../../Images/1375.jpg) !important;
+    min-height: 100vh !important; 
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
 }

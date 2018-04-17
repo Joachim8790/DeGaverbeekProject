@@ -218,6 +218,7 @@
     <Content Include="Content\DeGaverbeekStore\css\Navigation.css" />
     <Content Include="Content\DeGaverbeekStore\css\site.css" />
     <Content Include="Content\DeGaverbeekStore\js\site.js" />
+    <Content Include="Content\Images\1375.jpg" />
     <Content Include="Content\Images\alpro.png" />
     <Content Include="Content\Images\apollo.png" />
     <Content Include="Content\Images\aveno.png" />
@@ -235,6 +236,7 @@
     <Content Include="Content\Images\isfi.png" />
     <Content Include="Content\Images\knorr.png" />
     <Content Include="Content\Images\lecoubourg.png" />
+    <Content Include="Content\Images\loginPlaceholder.png" />
     <Content Include="Content\Images\logoSmall.png" />
     <Content Include="Content\Images\olympia.png" />
     <Content Include="Content\Images\online bestellen.jpg" />
@@ -328,7 +330,6 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
@@ -357,6 +358,7 @@
     <Content Include="Views\Shared\_LayoutWebshop.cshtml" />
     <Content Include="Views\Shop\Products.cshtml" />
     <Content Include="Views\Shop\ShoppingBasket.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

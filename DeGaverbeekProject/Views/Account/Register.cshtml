@@ -1,41 +1,74 @@
 ﻿@model DeGaverbeekProject.Models.RegisterViewModel
+
 @{
-    ViewBag.Title = "Register";
+    Layout = null;
 }
 
-<h2>@ViewBag.Title.</h2>
+<!DOCTYPE html>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="~/Content/aos.css" />
+    <script src="~/Scripts/aos.js"></script>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/DeGaverbeekStore/css")
+    @Scripts.Render("~/bundles/modernizr")
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="transparent-bg"></div>
+    <div class="registerScreen">
+        
+            <div class="outer">
+                <div class="middle">
+                    <div class="registercol">
+                        <div class="headerSecondary-left">
+                            <h5>Registreren</h5>
+                        </div>
+                        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                        {
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" name="CompanyName" id="CompanyName" placeholder="Bedrijfsnaam" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" name="CompanyActivity" id="CompanyActivity" placeholder="Bedrijfsactiviteit" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" name="Street" id="Street" placeholder="Straat" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"name="Number" id="Number" placeholder="Huisnummer" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" name="PostalCode"  id="PostalCode" placeholder="Postcode" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" name="City" id="City" placeholder="Gemeente" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" name="Country" id="Country" placeholder="Land" class="TextBoxDesign" />
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" name="FirstNameContact" id="FirstNameContact" placeholder="Voornaam contactpersoon" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" name="LastNameContact" id="LastNameContact" placeholder="Achternaam contactpersoon" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" name="VATNumber" id="VATNumber" placeholder="Ondernemingsnummer" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" name="Email" id="Email" placeholder="Emailadres" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" name="Telephone" id="Telephone" placeholder="Telefoon" class="TextBoxDesign" />
+                                    <input type="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" name="Fax" id="Fax" placeholder="Fax" class="TextBoxDesign" />
+                                    <button data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" class="btn registerbtn" type="submit">REGISTEREN</button>
+                                    <a class="newUser" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" href="@Url.Action("Login", "Account")">Reeds een gebruiker, meld je nu aan</a>
+
+
+                                </div>
+                            </div>
+
+                        }
+                </div>  
+                            
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+                    AOS.init();
+    </script>
+</body>
+</html>
