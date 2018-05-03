@@ -13,6 +13,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
     <link rel="stylesheet" href="~/Content/aos.css" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+          integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+          crossorigin="anonymous">
+    <!-- or -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+          integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+          crossorigin="anonymous">
     <script src="~/Scripts/aos.js"></script>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/DeGaverbeekStore/css")
@@ -21,31 +30,35 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="transparent-bg"></div>
-    <div class="loginScreen">
-        <div class="row">
-            <div class="outer">
-                <div class="middle">
-                        <div class="col-sm-12 logincol">
-                            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
-                            {
-                            <img alt="login-placeholder" src="~/Content/Images/loginPlaceholder.png"/>
-                            <input type="text" name="Email" id="Email" placeholder="Emailadres" class="TextBoxDesign" />
-                            <input type="password" name="Password" id="Password" placeholder="Wachtwoord" class="TextBoxDesign" />
-                            <div class="row">
-                            <div class="col-sm-12 pwforgot no-padding"><a href="@Url.Action("ForgotPassword", "Account")">Wachtwoord vergeten?</a></div>
-                            </div>
 
+    <div class="valign-wrapper" id="loginBackground" style="min-height:100vh !important">
 
-                            <button class="btn loginbtn" type="submit">AANMELDEN</button>
-                            <a class="newUser" href="@Url.Action("Register", "Account")">Nog geen gebruiker? Vraag nu je account aan</a>
-                           
-                            }
-                        </div>
+        <div class="row overflow-hidden maxWidth1100">
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                <div class="col s12 m12">
+                    <div class="headerSecondary-left">
+                        <h4>AANMELDEN</h4>
                     </div>
                 </div>
-            </div>
+                <div class="col s12 center-align">
+                    <img class="profilePlaceholder animated bounceInLeft" alt="login-placeholder" src="~/Content/Images/loginPlaceholder.png" />
+                    </div>
+                    <div class="col s12">
+                    <input type="text" name="Email" id="Email" placeholder="Emailadres" class="TextBoxDesign animated bounceInLeft" />
+                    <input type="password" name="Password" id="Password" placeholder="Wachtwoord" class="TextBoxDesign animated bounceInLeft" />
+
+                        <div class="col s12 pwforgot white-text animated bounceInLeft"><a href="@Url.Action("ForgotPassword", "Account")">Wachtwoord vergeten?</a></div>
+
+
+                    <button class="btn loginbtn animated bounceInLeft" type="submit">AANMELDEN</button>
+                    <a class="newUser animated bounceInLeft" href="@Url.Action("Register", "Account")">Nog geen gebruiker? Vraag nu je account aan</a>
+
                 </div>
+
+            }
+        </div>
+    </div>
                 @Scripts.Render("~/bundles/jquery")
                 @Scripts.Render("~/bundles/bootstrap")
                 <script>

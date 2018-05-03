@@ -359,6 +359,7 @@
     <Content Include="Views\Shop\Products.cshtml" />
     <Content Include="Views\Shop\ShoppingBasket.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shop\OrderHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

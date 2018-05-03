@@ -8,13 +8,22 @@
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
     <link rel="stylesheet" href="~/Content/aos.css" />
     <script src="~/Scripts/aos.js"></script>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
     <a id="calltarget" style="position:fixed;bottom:30px;left:30px;" onclick="callme()" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">local_phone</i></a>
-
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+          integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+          crossorigin="anonymous">
+    <!-- or -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+          integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+          crossorigin="anonymous">
     <!-- Tap Target Structure -->
     <div class="tap-target" data-activates="calltarget">
         <div class="tap-target-content">
@@ -70,10 +79,10 @@
                     <li><a href="@Url.Action("Beleg","Home")">Beleg</a></li>
                     <li><a href="@Url.Action("NonFood","Home")">Non-food</a></li>
                 </ul>
-                <ul class="right hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down" style="position:absolute;z-index:10000;top:0;right:0;">
                     <div class="valign-wrapper" style="width:fit-content;height:100%;float:right; display:inline-block;line-height:100px;">
                         <li><b><a href="@Url.Action("Index","Home")">home</a></b></li>
-                        <li><b><a class="dropdown-button" href="#!" data-activates="dropdown2">producten<i style="font-variant:initial; line-height:100px;" class="material-icons right">arrow_drop_down</i></a></b></li>
+                        <li><b><a class="dropdown-button" href="#!" style="padding-top: 5px;" data-activates="dropdown2">producten<i style="font-variant:initial; line-height:100px;" class="material-icons right">arrow_drop_down</i></a></b></li>
                         <li><b><a href="@Url.Action("Contact","Home")">contact</a></b></li>
                         <li><b><a class="modal-trigger" href="#modal1">online bestellen</a></b></li>
                     </div>

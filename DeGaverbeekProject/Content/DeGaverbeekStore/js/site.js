@@ -22,6 +22,7 @@ function MaterializeInitialization()
   );
     $('.dropdown-button').dropdown();
     $('.modal').modal();
+    $('.scrollspy').scrollSpy();
         
 }
 function MegaDDLInit() {

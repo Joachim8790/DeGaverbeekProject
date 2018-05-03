@@ -18,5 +18,9 @@ namespace DeGaverbeekProject.Controllers
         {
             return View();
         }
+        public ActionResult OrderHistory()
+        {
+            return View();
+        }
     }
 }

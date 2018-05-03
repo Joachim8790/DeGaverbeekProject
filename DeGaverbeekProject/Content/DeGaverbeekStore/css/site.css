@@ -285,6 +285,7 @@ table p{
     background-color: #4BB543;
     float:right;
     clear:both;
+    margin-bottom:20px;
     transform:skewX(30deg);
     text-align:right;
     overflow:hidden;
@@ -309,6 +310,7 @@ table p{
     background-color: #4BB543;
     float:left;
     clear:both;
+    margin-bottom:20px;
     transform:skewX(30deg);
     text-align:left;
     overflow:hidden;
@@ -333,6 +335,7 @@ table p{
     background-color: #ff9000;
     float:right;
     clear:both;
+    margin-bottom:20px;
     transform:skewX(30deg);
     text-align:right;
     overflow:hidden;
@@ -357,6 +360,7 @@ table p{
     background-color: #ff9000;
     float:left;
     clear:both;
+    margin-bottom:20px;
     transform:skewX(30deg);
     text-align:left;
     overflow:hidden;
@@ -540,7 +544,7 @@ position: static;
 }
 .loginbtn,.registerbtn{
     width:100% !important;
-    background-color:#ff9000;
+    background-color:#4BB543;
     color:#fff;
     border-radius:0px;
     height:auto !important;
@@ -574,18 +578,24 @@ position: static;
     color:#ff9000 !important;
     text-decoration:none;   
 }
-.loginScreen .pwforgot{
+.col.s12.pwforgot{
     text-align:left;
     padding-left:15px !important;
-
+    padding-bottom:15px;
+    padding-top:15px;
     font-weight:bold;
 }
-.loginScreen .newUser{
-    text-align:center;
-    display:block;
-    font-weight:bold;
+.col.s12.pwforgot a{
+    color:#fff;    
 }
-.loginScreen img{
+.newUser{
+    text-align:center !important;
+    display:block !important;
+    font-style:italic;
+    color:#fff !important;
+}
+.profilePlaceholder{
+  
     width:calc(100% - 20px);
     margin:15px;
     max-width: 300px;
@@ -597,3 +607,22 @@ position: static;
     background-repeat: no-repeat !important;
     background-size: cover !important; 
 }
+ #registerBackground, #loginBackground{
+     background: rgba(255,187,0,1);
+background: -moz-linear-gradient(left, rgba(255,187,0,1) 0%, rgba(255,144,0,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,187,0,1)), color-stop(100%, rgba(255,144,0,1)));
+background: -webkit-linear-gradient(left, rgba(255,187,0,1) 0%, rgba(255,144,0,1) 100%);
+background: -o-linear-gradient(left, rgba(255,187,0,1) 0%, rgba(255,144,0,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,187,0,1) 0%, rgba(255,144,0,1) 100%);
+background: linear-gradient(to right, rgba(255,187,0,1) 0%, rgba(255,144,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ff9000', GradientType=1 );
+
+
+
+}
+ .overflow-hidden{
+     overflow:hidden !important;
+ }
+ .maxWidth1100{
+     max-width:1100px;
+ }
