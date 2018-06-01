@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gaverbeek_syncModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="categorieen">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="uint" Nullable="false" />
+          <Property Name="cat_code" Type="varchar" MaxLength="15" />
+          <Property Name="cat_naam" Type="varchar" MaxLength="50" />
+          <Property Name="cat_seq" Type="smallint" />
+          <Property Name="cat_type_mag" Type="uint" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="klanten">
+          <Key>
+            <PropertyRef Name="klant_id" />
+          </Key>
+          <Property Name="klant_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="klant_aanspreking" Type="varchar" MaxLength="10" />
+          <Property Name="klant_naam" Type="varchar" MaxLength="45" />
+          <Property Name="klant_code" Type="varchar" MaxLength="20" />
+          <Property Name="klant_adres" Type="varchar" MaxLength="40" />
+          <Property Name="klant_post" Type="varchar" MaxLength="10" />
+          <Property Name="klant_local" Type="varchar" MaxLength="40" />
+          <Property Name="klant_land" Type="varchar" MaxLength="2" />
+          <Property Name="klant_telefoon" Type="varchar" MaxLength="20" />
+          <Property Name="klant_fax" Type="varchar" MaxLength="20" />
+          <Property Name="klant_gsm" Type="varchar" MaxLength="20" />
+          <Property Name="klant_email" Type="varchar" MaxLength="100" />
+          <Property Name="klant_btw_nr" Type="varchar" MaxLength="20" />
+          <Property Name="klant_btw_plichtig" Type="tinyint" />
+          <Property Name="klant_freq_fakt" Type="int" />
+          <Property Name="klant_korting" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="klant_vrije_code" Type="tinyint" />
+          <Property Name="klant_code_actief" Type="tinyint" />
+          <Property Name="klant_munt" Type="varchar" MaxLength="3" />
+          <Property Name="klant_opmerkingen" Type="longtext" />
+          <Property Name="klant_betaling_dagen" Type="int" />
+          <Property Name="klant_betaling_basis" Type="int" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="klanten_adressen">
+          <Key>
+            <PropertyRef Name="klant_adres_id" />
+          </Key>
+          <Property Name="klant_adres_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="klant_id" Type="int" />
+          <Property Name="klant_naam" Type="varchar" MaxLength="40" />
+          <Property Name="klant_adres" Type="varchar" MaxLength="40" />
+          <Property Name="klant_post" Type="varchar" MaxLength="10" />
+          <Property Name="klant_local" Type="varchar" MaxLength="40" />
+          <Property Name="klant_land" Type="varchar" MaxLength="2" />
+          <Property Name="klant_telefoon" Type="varchar" MaxLength="20" />
+          <Property Name="klant_fax" Type="varchar" MaxLength="20" />
+          <Property Name="klant_gsm" Type="varchar" MaxLength="20" />
+          <Property Name="klant_email" Type="varchar" MaxLength="100" />
+          <Property Name="klant_adres_actief" Type="tinyint" />
+          <Property Name="klant_adres_default" Type="tinyint" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="klanten_cat_kort">
+          <Key>
+            <PropertyRef Name="klantcat_id" />
+          </Key>
+          <Property Name="klantcat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="klantcat_klant_id" Type="int" />
+          <Property Name="klantcat_cat_id" Type="int" />
+          <Property Name="klantcat_korting" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="klantcat_van" Type="datetime" Precision="0" />
+          <Property Name="klantcat_tot" Type="datetime" Precision="0" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="klanten_lever_kort">
+          <Key>
+            <PropertyRef Name="klantlever_id" />
+          </Key>
+          <Property Name="klantlever_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="klantlever_klant_id" Type="int" />
+          <Property Name="klantlever_lever_id" Type="int" />
+          <Property Name="klantlever_korting" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="klantlever_korting_extra" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="klantlever_van" Type="datetime" Precision="0" />
+          <Property Name="klantlever_tot" Type="datetime" Precision="0" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="klanten_producten">
+          <Key>
+            <PropertyRef Name="klantprod_id" />
+          </Key>
+          <Property Name="klantprod_id" Type="uint" Nullable="false" />
+          <Property Name="klantprod_klant_id" Type="int" Nullable="false" />
+          <Property Name="klantprod_prod_id" Type="int" Nullable="false" />
+          <Property Name="klantprod_prijs" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="klantprod_korting" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="klantprod_vasteprijs" Type="tinyint" Nullable="false" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'log_duration' in the table 'def.gaverbeek_sync.log' was excluded.-->
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="log_id" />
+          </Key>
+          <Property Name="log_id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="log_date" Type="datetime" Precision="0" />
+          <Property Name="log_object" Type="varchar" MaxLength="255" />
+          <Property Name="log_error" Type="int" />
+          <Property Name="log_description" Type="longtext" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="producten">
+          <Key>
+            <PropertyRef Name="prod_id" />
+          </Key>
+          <Property Name="prod_id" Type="int" Nullable="false" />
+          <Property Name="prod_nummer" Type="int" />
+          <Property Name="prod_code" Type="varchar" MaxLength="25" />
+          <Property Name="prod_benaming" Type="varchar" MaxLength="50" />
+          <Property Name="prod_vkp" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="prod_vkp_excl" Type="bool" />
+          <Property Name="prod_aantal_decim" Type="bool" />
+          <Property Name="prod_btw_code" Type="int" />
+          <Property Name="prod_eenheid" Type="varchar" MaxLength="15" />
+          <Property Name="prod_besteh_idem_vkpeh" Type="bool" />
+          <Property Name="prod_type" Type="varchar" MaxLength="1" />
+          <Property Name="prod_vrije_code" Type="bool" />
+          <Property Name="prod_code_actief" Type="bool" />
+          <Property Name="prod_opmerkingen" Type="longtext" />
+          <Property Name="prod_cat_id" Type="int" />
+          <Property Name="prod_lever_id" Type="int" />
+          <Property Name="prod_lever_code" Type="varchar" MaxLength="50" />
+          <Property Name="prod_lever_benaming" Type="varchar" MaxLength="255" />
+          <Property Name="prod_extra_prod" Type="int" />
+          <Property Name="prod_extra_aantal" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="prod_boo_prijs_vast" Type="bool" />
+          <Property Name="prod_boo_include_hist" Type="bool" />
+          <Property Name="created_on" Type="timestamp" Precision="0" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="promoties">
+          <Key>
+            <PropertyRef Name="prom_id" />
+          </Key>
+          <Property Name="prom_id" Type="uint" Nullable="false" />
+          <Property Name="prom_prod_id" Type="int" Nullable="false" />
+          <Property Name="prom_prijs" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="prom_korting" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="prom_van" Type="date" />
+          <Property Name="prom_tot" Type="date" />
+          <Property Name="created_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="varchar" MaxLength="20" />
+          <Property Name="modified_on" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="gaverbeek_syncModelStoreContainer">
+          <EntitySet Name="categorieen" EntityType="Self.categorieen" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="klanten" EntityType="Self.klanten" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="klanten_adressen" EntityType="Self.klanten_adressen" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="klanten_cat_kort" EntityType="Self.klanten_cat_kort" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="klanten_lever_kort" EntityType="Self.klanten_lever_kort" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="klanten_producten" EntityType="Self.klanten_producten" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="log" EntityType="Self.log" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="producten" EntityType="Self.producten" Schema="gaverbeek_sync" store:Type="Tables" />
+          <EntitySet Name="promoties" EntityType="Self.promoties" Schema="gaverbeek_sync" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gaverbeek_syncModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="categorieen">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="Int64" Nullable="false" />
+          <Property Name="cat_code" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="cat_naam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cat_seq" Type="Int16" />
+          <Property Name="cat_type_mag" Type="Int64" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="klanten">
+          <Key>
+            <PropertyRef Name="klant_id" />
+          </Key>
+          <Property Name="klant_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="klant_aanspreking" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="klant_naam" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="klant_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_adres" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="klant_post" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="klant_local" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="klant_land" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="klant_telefoon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_gsm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="klant_btw_nr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_btw_plichtig" Type="SByte" />
+          <Property Name="klant_freq_fakt" Type="Int32" />
+          <Property Name="klant_korting" Type="Decimal" />
+          <Property Name="klant_vrije_code" Type="SByte" />
+          <Property Name="klant_code_actief" Type="SByte" />
+          <Property Name="klant_munt" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="klant_opmerkingen" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="klant_betaling_dagen" Type="Int32" />
+          <Property Name="klant_betaling_basis" Type="Int32" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="klanten_adressen">
+          <Key>
+            <PropertyRef Name="klant_adres_id" />
+          </Key>
+          <Property Name="klant_adres_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="klant_id" Type="Int32" />
+          <Property Name="klant_naam" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="klant_adres" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="klant_post" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="klant_local" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="klant_land" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="klant_telefoon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_gsm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="klant_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="klant_adres_actief" Type="SByte" />
+          <Property Name="klant_adres_default" Type="SByte" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="klanten_cat_kort">
+          <Key>
+            <PropertyRef Name="klantcat_id" />
+          </Key>
+          <Property Name="klantcat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="klantcat_klant_id" Type="Int32" />
+          <Property Name="klantcat_cat_id" Type="Int32" />
+          <Property Name="klantcat_korting" Type="Decimal" />
+          <Property Name="klantcat_van" Type="DateTime" />
+          <Property Name="klantcat_tot" Type="DateTime" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="klanten_lever_kort">
+          <Key>
+            <PropertyRef Name="klantlever_id" />
+          </Key>
+          <Property Name="klantlever_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="klantlever_klant_id" Type="Int32" />
+          <Property Name="klantlever_lever_id" Type="Int32" />
+          <Property Name="klantlever_korting" Type="Decimal" />
+          <Property Name="klantlever_korting_extra" Type="Decimal" />
+          <Property Name="klantlever_van" Type="DateTime" />
+          <Property Name="klantlever_tot" Type="DateTime" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="klanten_producten">
+          <Key>
+            <PropertyRef Name="klantprod_id" />
+          </Key>
+          <Property Name="klantprod_id" Type="Int64" Nullable="false" />
+          <Property Name="klantprod_klant_id" Type="Int32" Nullable="false" />
+          <Property Name="klantprod_prod_id" Type="Int32" Nullable="false" />
+          <Property Name="klantprod_prijs" Type="Decimal" />
+          <Property Name="klantprod_korting" Type="Decimal" />
+          <Property Name="klantprod_vasteprijs" Type="SByte" Nullable="false" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="log_id" />
+          </Key>
+          <Property Name="log_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="log_date" Type="DateTime" />
+          <Property Name="log_object" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="log_error" Type="Int32" />
+          <Property Name="log_description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="producten">
+          <Key>
+            <PropertyRef Name="prod_id" />
+          </Key>
+          <Property Name="prod_id" Type="Int32" Nullable="false" />
+          <Property Name="prod_nummer" Type="Int32" />
+          <Property Name="prod_code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="prod_benaming" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prod_vkp" Type="Decimal" />
+          <Property Name="prod_vkp_excl" Type="Boolean" />
+          <Property Name="prod_aantal_decim" Type="Boolean" />
+          <Property Name="prod_btw_code" Type="Int32" />
+          <Property Name="prod_eenheid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="prod_besteh_idem_vkpeh" Type="Boolean" />
+          <Property Name="prod_type" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="prod_vrije_code" Type="Boolean" />
+          <Property Name="prod_code_actief" Type="Boolean" />
+          <Property Name="prod_opmerkingen" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="prod_cat_id" Type="Int32" />
+          <Property Name="prod_lever_id" Type="Int32" />
+          <Property Name="prod_lever_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prod_lever_benaming" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="prod_extra_prod" Type="Int32" />
+          <Property Name="prod_extra_aantal" Type="Decimal" />
+          <Property Name="prod_boo_prijs_vast" Type="Boolean" />
+          <Property Name="prod_boo_include_hist" Type="Boolean" />
+          <Property Name="created_on" Type="DateTime" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="promoties">
+          <Key>
+            <PropertyRef Name="prom_id" />
+          </Key>
+          <Property Name="prom_id" Type="Int64" Nullable="false" />
+          <Property Name="prom_prod_id" Type="Int32" Nullable="false" />
+          <Property Name="prom_prijs" Type="Decimal" />
+          <Property Name="prom_korting" Type="Decimal" />
+          <Property Name="prom_van" Type="DateTime" />
+          <Property Name="prom_tot" Type="DateTime" />
+          <Property Name="created_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="modified_on" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="modified_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="gaverbeek_syncEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categorieen" EntityType="Self.categorieen" />
+          <EntitySet Name="klanten" EntityType="Self.klanten" />
+          <EntitySet Name="klanten_adressen" EntityType="Self.klanten_adressen" />
+          <EntitySet Name="klanten_cat_kort" EntityType="Self.klanten_cat_kort" />
+          <EntitySet Name="klanten_lever_kort" EntityType="Self.klanten_lever_kort" />
+          <EntitySet Name="klanten_producten" EntityType="Self.klanten_producten" />
+          <EntitySet Name="log" EntityType="Self.log" />
+          <EntitySet Name="producten" EntityType="Self.producten" />
+          <EntitySet Name="promoties" EntityType="Self.promoties" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gaverbeek_syncModelStoreContainer" CdmEntityContainer="gaverbeek_syncEntities">
+          <EntitySetMapping Name="categorieen">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.categorieen">
+              <MappingFragment StoreEntitySet="categorieen">
+                <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+                <ScalarProperty Name="cat_code" ColumnName="cat_code" />
+                <ScalarProperty Name="cat_naam" ColumnName="cat_naam" />
+                <ScalarProperty Name="cat_seq" ColumnName="cat_seq" />
+                <ScalarProperty Name="cat_type_mag" ColumnName="cat_type_mag" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="klanten">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.klanten">
+              <MappingFragment StoreEntitySet="klanten">
+                <ScalarProperty Name="klant_id" ColumnName="klant_id" />
+                <ScalarProperty Name="klant_aanspreking" ColumnName="klant_aanspreking" />
+                <ScalarProperty Name="klant_naam" ColumnName="klant_naam" />
+                <ScalarProperty Name="klant_code" ColumnName="klant_code" />
+                <ScalarProperty Name="klant_adres" ColumnName="klant_adres" />
+                <ScalarProperty Name="klant_post" ColumnName="klant_post" />
+                <ScalarProperty Name="klant_local" ColumnName="klant_local" />
+                <ScalarProperty Name="klant_land" ColumnName="klant_land" />
+                <ScalarProperty Name="klant_telefoon" ColumnName="klant_telefoon" />
+                <ScalarProperty Name="klant_fax" ColumnName="klant_fax" />
+                <ScalarProperty Name="klant_gsm" ColumnName="klant_gsm" />
+                <ScalarProperty Name="klant_email" ColumnName="klant_email" />
+                <ScalarProperty Name="klant_btw_nr" ColumnName="klant_btw_nr" />
+                <ScalarProperty Name="klant_btw_plichtig" ColumnName="klant_btw_plichtig" />
+                <ScalarProperty Name="klant_freq_fakt" ColumnName="klant_freq_fakt" />
+                <ScalarProperty Name="klant_korting" ColumnName="klant_korting" />
+                <ScalarProperty Name="klant_vrije_code" ColumnName="klant_vrije_code" />
+                <ScalarProperty Name="klant_code_actief" ColumnName="klant_code_actief" />
+                <ScalarProperty Name="klant_munt" ColumnName="klant_munt" />
+                <ScalarProperty Name="klant_opmerkingen" ColumnName="klant_opmerkingen" />
+                <ScalarProperty Name="klant_betaling_dagen" ColumnName="klant_betaling_dagen" />
+                <ScalarProperty Name="klant_betaling_basis" ColumnName="klant_betaling_basis" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="klanten_adressen">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.klanten_adressen">
+              <MappingFragment StoreEntitySet="klanten_adressen">
+                <ScalarProperty Name="klant_adres_id" ColumnName="klant_adres_id" />
+                <ScalarProperty Name="klant_id" ColumnName="klant_id" />
+                <ScalarProperty Name="klant_naam" ColumnName="klant_naam" />
+                <ScalarProperty Name="klant_adres" ColumnName="klant_adres" />
+                <ScalarProperty Name="klant_post" ColumnName="klant_post" />
+                <ScalarProperty Name="klant_local" ColumnName="klant_local" />
+                <ScalarProperty Name="klant_land" ColumnName="klant_land" />
+                <ScalarProperty Name="klant_telefoon" ColumnName="klant_telefoon" />
+                <ScalarProperty Name="klant_fax" ColumnName="klant_fax" />
+                <ScalarProperty Name="klant_gsm" ColumnName="klant_gsm" />
+                <ScalarProperty Name="klant_email" ColumnName="klant_email" />
+                <ScalarProperty Name="klant_adres_actief" ColumnName="klant_adres_actief" />
+                <ScalarProperty Name="klant_adres_default" ColumnName="klant_adres_default" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="klanten_cat_kort">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.klanten_cat_kort">
+              <MappingFragment StoreEntitySet="klanten_cat_kort">
+                <ScalarProperty Name="klantcat_id" ColumnName="klantcat_id" />
+                <ScalarProperty Name="klantcat_klant_id" ColumnName="klantcat_klant_id" />
+                <ScalarProperty Name="klantcat_cat_id" ColumnName="klantcat_cat_id" />
+                <ScalarProperty Name="klantcat_korting" ColumnName="klantcat_korting" />
+                <ScalarProperty Name="klantcat_van" ColumnName="klantcat_van" />
+                <ScalarProperty Name="klantcat_tot" ColumnName="klantcat_tot" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="klanten_lever_kort">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.klanten_lever_kort">
+              <MappingFragment StoreEntitySet="klanten_lever_kort">
+                <ScalarProperty Name="klantlever_id" ColumnName="klantlever_id" />
+                <ScalarProperty Name="klantlever_klant_id" ColumnName="klantlever_klant_id" />
+                <ScalarProperty Name="klantlever_lever_id" ColumnName="klantlever_lever_id" />
+                <ScalarProperty Name="klantlever_korting" ColumnName="klantlever_korting" />
+                <ScalarProperty Name="klantlever_korting_extra" ColumnName="klantlever_korting_extra" />
+                <ScalarProperty Name="klantlever_van" ColumnName="klantlever_van" />
+                <ScalarProperty Name="klantlever_tot" ColumnName="klantlever_tot" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="klanten_producten">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.klanten_producten">
+              <MappingFragment StoreEntitySet="klanten_producten">
+                <ScalarProperty Name="klantprod_id" ColumnName="klantprod_id" />
+                <ScalarProperty Name="klantprod_klant_id" ColumnName="klantprod_klant_id" />
+                <ScalarProperty Name="klantprod_prod_id" ColumnName="klantprod_prod_id" />
+                <ScalarProperty Name="klantprod_prijs" ColumnName="klantprod_prijs" />
+                <ScalarProperty Name="klantprod_korting" ColumnName="klantprod_korting" />
+                <ScalarProperty Name="klantprod_vasteprijs" ColumnName="klantprod_vasteprijs" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="log">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="log_id" ColumnName="log_id" />
+                <ScalarProperty Name="log_date" ColumnName="log_date" />
+                <ScalarProperty Name="log_object" ColumnName="log_object" />
+                <ScalarProperty Name="log_error" ColumnName="log_error" />
+                <ScalarProperty Name="log_description" ColumnName="log_description" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="producten">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.producten">
+              <MappingFragment StoreEntitySet="producten">
+                <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+                <ScalarProperty Name="prod_nummer" ColumnName="prod_nummer" />
+                <ScalarProperty Name="prod_code" ColumnName="prod_code" />
+                <ScalarProperty Name="prod_benaming" ColumnName="prod_benaming" />
+                <ScalarProperty Name="prod_vkp" ColumnName="prod_vkp" />
+                <ScalarProperty Name="prod_vkp_excl" ColumnName="prod_vkp_excl" />
+                <ScalarProperty Name="prod_aantal_decim" ColumnName="prod_aantal_decim" />
+                <ScalarProperty Name="prod_btw_code" ColumnName="prod_btw_code" />
+                <ScalarProperty Name="prod_eenheid" ColumnName="prod_eenheid" />
+                <ScalarProperty Name="prod_besteh_idem_vkpeh" ColumnName="prod_besteh_idem_vkpeh" />
+                <ScalarProperty Name="prod_type" ColumnName="prod_type" />
+                <ScalarProperty Name="prod_vrije_code" ColumnName="prod_vrije_code" />
+                <ScalarProperty Name="prod_code_actief" ColumnName="prod_code_actief" />
+                <ScalarProperty Name="prod_opmerkingen" ColumnName="prod_opmerkingen" />
+                <ScalarProperty Name="prod_cat_id" ColumnName="prod_cat_id" />
+                <ScalarProperty Name="prod_lever_id" ColumnName="prod_lever_id" />
+                <ScalarProperty Name="prod_lever_code" ColumnName="prod_lever_code" />
+                <ScalarProperty Name="prod_lever_benaming" ColumnName="prod_lever_benaming" />
+                <ScalarProperty Name="prod_extra_prod" ColumnName="prod_extra_prod" />
+                <ScalarProperty Name="prod_extra_aantal" ColumnName="prod_extra_aantal" />
+                <ScalarProperty Name="prod_boo_prijs_vast" ColumnName="prod_boo_prijs_vast" />
+                <ScalarProperty Name="prod_boo_include_hist" ColumnName="prod_boo_include_hist" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="promoties">
+            <EntityTypeMapping TypeName="gaverbeek_syncModel.promoties">
+              <MappingFragment StoreEntitySet="promoties">
+                <ScalarProperty Name="prom_id" ColumnName="prom_id" />
+                <ScalarProperty Name="prom_prod_id" ColumnName="prom_prod_id" />
+                <ScalarProperty Name="prom_prijs" ColumnName="prom_prijs" />
+                <ScalarProperty Name="prom_korting" ColumnName="prom_korting" />
+                <ScalarProperty Name="prom_van" ColumnName="prom_van" />
+                <ScalarProperty Name="prom_tot" ColumnName="prom_tot" />
+                <ScalarProperty Name="created_on" ColumnName="created_on" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

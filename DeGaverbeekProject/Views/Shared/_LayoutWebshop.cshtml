@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="~/Content/aos.css" />
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
-          integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+              integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
           crossorigin="anonymous">
     <!-- or -->
     <link rel="stylesheet"
@@ -39,7 +39,7 @@
                 <li><a class="Products" href="@Url.Action("Products","Shop")"><i class="material-icons">shopping_cart</i>De Gaverbeek Store</a></li>
                 <li><a class="ShoppingBasket" href="@Url.Action("ShoppingBasket","Shop")"><i class="material-icons">shopping_basket</i>Winkelmandje</a></li>
                 <li><a class ="MyProfile" href="#"><i class="material-icons">account_circle</i>Mijn profiel</a></li>
-                <li><a class="History" href="#"><i class="material-icons">history</i>Bestelhistoriek</a></li>
+                <li><a class="OrderHistory"  href="@Url.Action("OrderHistory","Shop")"><i class="material-icons">history</i>Bestelhistoriek</a></li>
                 <li><a class="Settings" href="#"><i class="material-icons">settings</i>Instellingen</a></li>
                 <li><a class="LogOut" href="#"><i class="material-icons">exit_to_app</i>Afmelden</a></li>
             </ul>
@@ -50,9 +50,9 @@
             <a class="Products" href="@Url.Action("Products","Shop")"><i class="material-icons">shopping_cart</i><h2>De Gaverbeek Store</h2></a>
             <a class="ShoppingBasket" href="@Url.Action("ShoppingBasket","Shop")"><i class="material-icons">shopping_basket</i><div id="Badge" class="secondary-color">4</div><h2>Winkelmandje</h2></a>
             <a class ="MyProfile" href="#"><i class="material-icons">account_circle</i><h2>Mijn profiel</h2></a>
-            <a class="History" href="#"><i class="material-icons">history</i><h2>Bestelhistoriek</h2></a>
+            <a class="OrderHistory" href="@Url.Action("OrderHistory","Shop")"><i class="material-icons">history</i><h2>Bestelhistoriek</h2></a>
             <a class="Settings" href="#"><i class="material-icons">settings</i><h2>Instellingen</h2></a>
-            <a class="LogOut" href="#"><i class="material-icons"> exit_to_app</i><h2>Afmelden</h2></a>
+            <a class="LogOut" href="@Url.Action("LogOut","Shop")"><i class="material-icons"> exit_to_app</i><h2>Afmelden</h2></a>
         </div>
 
    

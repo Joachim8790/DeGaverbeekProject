@@ -3,46 +3,46 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="slider">
+@*<div class="slider">
     <ul class="slides">
         <li>
             <img src="~/Content/Images/voorbeeldimg1.jpg"> <!-- random image -->
             <div class="caption right-align">
-                <h3 class="light grey-text text-lighten-3">EEN SNELLE SERVICE</h3>
-                <h5>KWALITEIT OP TIJD</h5>
+                
             </div>
         </li>
         <li>
             <img src="~/Content/Images/voorbeeldimg2.jpg"> <!-- random image -->
             <div class="caption right-align">
-                <h3 class="light grey-text text-lighten-3">GEROOKTE VIS</h3>
-                <h5>UITGEBREID ASSORTIMENT GEROOKTE VIS</h5>
+
             </div>
         </li>
         <li>
             <img src="~/Content/Images/voorbeeldimg3.jpg"> <!-- random image -->
             <div class="caption right-align">
-                <h3 class="light grey-text text-lighten-3">BAKKERIJ</h3>
-                <h5>GROOT AANBOD AFBAKPRODUCTEN</h5>
+
             </div>
         </li>
         <li>
             <img src="~/Content/Images/voorbeeldimg4.jpg"> <!-- random image -->
-            <div class="caption left-align">
-                <h3 class="light grey-text text-lighten-3">ZUIVELAFDELING</h3>
-                <h5>UITGEBREID AANBOD</h5>
+            <div class="caption right-align">
+
             </div>
         </li>
         <li>
             <img src="~/Content/Images/voorbeeldimg5.jpg"> <!-- random image -->
-            <div class="caption left-align">
-                <h3 class="light grey-text text-lighten-3">DROGE VOEDING</h3>
-                <h5>VERSCHILLENDE SOORTEN DROGE VOEDING</h5>
+            <div class="caption right-align">
+
             </div>
         </li>
     </ul>
+    <a class="waves-effect waves-light btn-large" style="position:absolute;bottom:40px;right:40px;z-index:1000000000;text-transform: initial;font-weight: 300;font-size: 1.2rem;"><i class="material-icons right">chevron_right</i>Ga naar onze webshop</a>
+</div>*@
+<div class="videoWrapper">
+    <!-- Copy & Pasted from YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P2ph_X-7rfY?rel=0&amp;controls=0&amp;showinfo=0?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<div style="width:100vw;height:5px;background-color:#ff9000;padding:0;margin:0;"></div>
+
 <div class="pointerdiv" style="height:40px;"></div>
 <div class="row" style="text-align:center;">
     <br />
@@ -50,82 +50,82 @@
     <br />
 </div>
 <div class="row welcome" style="z-index:10;">
+    @*<li><i class="material-icons left" style="color:#4BB543">check</i>Kwaliteitsproducten</li>
+    <li><i class="material-icons left" style="color:#4BB543">check</i>Versheid</li>
+    <li><i class="material-icons left" style="color:#4BB543">check</i>Stiptheid</li>
+    <li><i class="material-icons left" style="color:#4BB543">check</i>Klantvriendelijk</li>
+    <li><i class="material-icons left" style="color:#4BB543">check</i>Moderne infrastructuur</li>
+    <li><i class="material-icons left" style="color:#4BB543">check</i>Uitgebreid assortiment</li>*@
+
     @*<div class="valign-wrapper">*@
-        <div class="col-md-6">
-            <div class="welcome_left">
-                <h5 style="font-variant:small-caps;text-align:center;">OP ZOEK NAAR HORECALEVERANCIER?</h5>
-                <ul>
-                    <li><i class="material-icons left" style="color:#ff9000">check</i>Kwaliteitsproducten</li>
-                    <li><i class="material-icons left" style="color:#ff9000">check</i>Versheid</li>
-                    <li><i class="material-icons left" style="color:#ff9000">check</i>Stiptheid</li>
-                    <li><i class="material-icons left" style="color:#ff9000">check</i>Klantvriendelijk</li>
-                    <li><i class="material-icons left" style="color:#ff9000">check</i>Moderne infrastructuur</li>
-                    <li><i class="material-icons left" style="color:#ff9000">check</i>Uitgebreid assortiment</li>
-                </ul>
-            </div>
+    <div class="col-sm-12" id="sections">
+
+        <div class="col-md-4">
+            
+            <img alt="Kwaliteitsproducten" src="~/Content/Images/medal.png" />
+            <h5>Kwaliteitsproducten</h5>
         </div>
-        <div class="col-md-6">
-            <div  class="welcome_right">
-                @*<div class="valign-wrapper">*@
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-left" data-aos-duration="1000"><div class="valign-wrapper"><a href="@Url.Action("Zuur","Home")">Zuur</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200"><div class="valign-wrapper"><a href="@Url.Action("Zuivel","Home")">Zuivel</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400"><div class="valign-wrapper"><a href="@Url.Action("Wijn","Home")">Wijn</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1800"><div class="valign-wrapper"><a href="@Url.Action("Vis","Home")">Vis</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000"><div class="valign-wrapper"><a href="@Url.Action("Suiker","Home")">Suiker</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600"><div class="valign-wrapper"><a href="@Url.Action("Kruiden","Home")">Kruiden</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600"><div class="valign-wrapper"><a href="@Url.Action("Deegwaren","Home")">Deeg</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="2200"><div class="valign-wrapper"><a href="@Url.Action("Conserven","Home")">Blikken</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"><div class="valign-wrapper"><a href="@Url.Action("Olie","Home")">Olie</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1400"><div class="valign-wrapper"><a href="@Url.Action("BakeOff","Home")">Bake-off</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1200"><div class="valign-wrapper"><a href="@Url.Action("Beleg","Home")">Beleg</a></div></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 product hoverable" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000"><div class="valign-wrapper"><a href="@Url.Action("NonFood","Home")">Non-food</a></div></div>
-                </div>
-            @*</div>*@
+        <div class="col-md-4">
+          
+            <img alt="Versheid" src="~/Content/Images/fish.png" />
+            <h5>Versheid</h5>
         </div>
+        <div class="col-md-4">
+           
+            <img alt="Stiptheid" src="~/Content/Images/clock.png" />
+            <h5>Stiptheid</h5>
+        </div>
+        <div class="col-md-4">
+           
+            <img alt="Klantvriendelijk" src="~/Content/Images/friendship.png" />
+            <h5>Klantvriendelijk</h5>
+        </div>
+        <div class="col-md-4">
+           
+            <img alt="Moderne infrastructuur" src="~/Content/Images/responsive-design-for-modern-screens.png" />
+            <h5>Moderne infrastructuur</h5>
+        </div>
+        <div class="col-md-4">
+           
+            <img alt="Uitgebreid assortiment" src="~/Content/Images/groceries.png" />
+            <h5>Uitgebreid assortiment</h5>
+
+        </div>
+      
+
+
+
+    </div>
+    
     </div>
 @*</div>*@
 <br />
 <br />
 <div class="pointerWhite"></div>
-<div class="row" style="z-index:9;background-color:#505050;margin-bottom:0;padding:25px 0;">
-    <br />
-    <br />
-    <h2>Online bestellen</h2>
-    <div id="modal1" class="modal modal-fixed-footer">
-        <div class="modal-content">
-            <h4>Bestelsysteem under construction</h4>
-            <p>Het bestelsysteem is nog in de ontwikkelingsfase en kan dus nog niet gebruikt worden.</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-        </div>
-    </div>
-<div class="col-lg-7 col-md-7" style="padding:0;">
-    <div id="shopleft" data-aos="fade-up" data-aos-duration="1000">
-        <h5 style="text-align:center;">VRAAG EEN ACCOUNT AAN VOOR HET ONLINE BESTELPLATFORM</h5>
-        <p>Via ons online bestelplatform kan je producten bestellen en laten leveren. Deze services is enkel voor B2B dus particulieren kunnen hier geen gebruik van maken. Om te starten moet je een gebruikersaccount aanvragen die dan wordt goedgekeurd.</p>
-        
-        <a href="#modal1" class="waves-effect waves-light btn-large modal-trigger" style="background-color:#ff9000;width:100%;"><i class="material-icons left">account_circle</i>ACCOUNT AANVRAGEN</a>
-        <p style="text-align:center;margin-top:15px;" class="mobileAanmelden"><a class="modal-trigger" href="#modal1" style="color:#ff9000;">Reeds een account? Meld je hier aan.</a></p>
-    </div>
-</div>
-<div class="col-lg-5 col-md-5" style="padding:0;">
-    <div id="shopright" data-aos="fade-up" data-aos-duration="1000">
-        <a  class="modal-trigger" href="#modal1">
-            <div class="filter-black">
-                <div class="shoprightbutton">
-                    <div class="center-logo">
-                        <i style="color:#fff;" class="material-icons large">shopping_cart</i>
-                        <br /><span style="color:#fff; font-size:large">AANMELDEN</span>
-                    </div>
+<div style="width:100% !important;background:#505050;">
 
+    <div class="row" style="z-index:9;background-color:#505050;margin-bottom:0;padding:25px 0;max-width:1300px;">
+        <br />
+        <br />
+        <h2>Online bestellen</h2>
 
-                </div>
-            </div>
-        </a>
+        <div class="col-lg-7 col-md-7" style="padding:0;">
+
+            <img alt="bestelsysteem" style="width:100%;" src="~/Content/Images/responsive.png" />
+        </div>
+
+        <div class="col-lg-5 col-md-5" style="padding:0;margin-top:10%;">
+            <h5 style="text-align:center;">VRAAG EEN ACCOUNT AAN VOOR HET ONLINE BESTELPLATFORM</h5>
+            <p style="color:#fff;">Via ons online bestelplatform kan je producten bestellen en laten leveren. Deze services is enkel voor B2B dus particulieren kunnen hier geen gebruik van maken. Om te starten moet je een gebruikersaccount aanvragen die dan wordt goedgekeurd.</p>
+
+            <a href="#modal1" class="waves-effect waves-light btn-large modal-trigger" style="background-color:#ff9000;width:100%;"><i class="material-icons left">account_circle</i>ACCOUNT AANVRAGEN</a>
+            <p style="text-align:center;margin-top:15px;" class="mobileAanmelden"><a class="modal-trigger" href="#modal1" style="color:#ff9000;">Reeds een account? Meld je hier aan.</a></p>
+
+        </div>
     </div>
+
 </div>
-</div>
+
 <div class="pointerGreyDark" style="background-color:#505050;"></div>
 <div class="row" style="z-index:8;background-color:#ffffff;margin-bottom:0;">
     <br />

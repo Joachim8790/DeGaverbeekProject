@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DeGaverbeekProject.DAO")]
+[assembly: AssemblyTitle("DeGaverbeekProject.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DeGaverbeekProject.DAO")]
+[assembly: AssemblyProduct("DeGaverbeekProject.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8716b4c4-fb3c-4400-abea-faf19da7741b")]
+[assembly: Guid("256dd146-03c2-428f-91ad-fb758058b4c9")]
 
 // Version information for an assembly consists of the following four values:
 //

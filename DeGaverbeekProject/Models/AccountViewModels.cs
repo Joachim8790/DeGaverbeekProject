@@ -65,7 +65,6 @@ namespace DeGaverbeekProject.Models
     public class RegisterViewModel
     {
         public string CompanyName { get; set; }
-        public string CompanyActivity { get; set; }
         public string FirstNameContact { get; set; }
         public string LastNameContact { get; set; }
         public string Street { get; set; }
@@ -76,6 +75,7 @@ namespace DeGaverbeekProject.Models
         public string VATNumber { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }
+        public string GSM { get; set; }
         public string Fax { get; set; }
     }
 

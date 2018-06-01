@@ -22,5 +22,10 @@ namespace DeGaverbeekProject.Controllers
         {
             return View();
         }
+        public ActionResult LogOut() {
+
+            return RedirectToAction("LogOff", "Account");
+
+        }
     }
 }
